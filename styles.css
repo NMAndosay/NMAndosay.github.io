@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu-Bold', Helvetica;
+}
+
+body{
+    background-color: #211C1C;
+}
+
+.navbar{
+    background-image: linear-gradient(176deg, #211C1C 0%, #181515 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container{
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.fa-gem{
+    margin-right: 0.5rem;
+}
+
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar_item{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 14px 0.2rem;
+}
+
+.navbar_links{
+    color: rgba(255,255,255,70%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1.5rem;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+}
+
+.navbar_links:hover{
+    border-bottom: 3px solid transparent;
+    background: linear-gradient(176deg, #211C1C, #181515) padding-box,
+                linear-gradient(45deg, #EC5453, #9747FF) border-box;
+    
+}
+
+
+.navbar_links:active{
+    border-bottom: 3px solid transparent;
+    background: linear-gradient(45deg, #EC5453, #9747FF) padding-box,
+                linear-gradient(45deg, #360746, #B51FEA) border-box;
+    transition: all 0.3 ease;
+}
+
+.gradient-shape{
+    width: 778px;
+    height: 779px;
+}
+
+.gradient-ellipse{
+    display: flex;
+    align-items: center;
+    width: 560px;
+    height: 543px;
+    top: 0;
+    left: 0;
+    border-radius: 280px/271.5px;
+    transform: rotate(-48.32deg);
+    filter:blur(10px);
+    background: linear-gradient(180deg, rgb(151,71,255) 0%, rgb(236,84,83) 19.06%, rgba(151,71,255,0) 100%)
+}
