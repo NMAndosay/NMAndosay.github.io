@@ -1,17 +1,24 @@
+/* GENERAL */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu-Bold', Helvetica;
+    font-family: 'Ubuntu-Bold', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body{
     background-color: #211C1C;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* NAVIGATION BAR */
 .navbar{
     background-image: linear-gradient(176deg, #211C1C 0%, #181515 100%);
-    height: 80px;
+    height: 8.26vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,13 +30,14 @@ body{
 
 .navbar_container{
     display: flex;
-    justify-content: center;
     height: 80px;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .fa-gem{
@@ -48,7 +56,7 @@ body{
     display: flex;
     justify-content: center;
     text-decoration: none;
-    padding: 14px 0.2rem;
+    padding: 0.875rem 0.2rem;
 }
 
 .navbar_links{
@@ -58,11 +66,9 @@ body{
     justify-content: center;
     text-decoration: none;
     padding: 0 1.5rem;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
     border-radius: 20px;
+    font-size: 1.2rem;
+    gap: 2rem;
 }
 
 .navbar_links:hover{
@@ -80,12 +86,92 @@ body{
     transition: all 0.3 ease;
 }
 
+/*#check {display: none;}*/
 
+/*for mobile-NAVIGATION BAR*/
+@media screen and (max-width: 960px){
+    .navbar_container{
+        display: flex;
+        justify-content: right;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar_menu{
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 80%;
+        position: absolute;
+        /*top: -1000px;
+        left: 0;
+        opacity: 0; */
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: linear-gradient(to bottom, #181515, #211C1C);
+        list-style: none;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    #check:checked ~ .navbar_menu {
+        left: 0;
+    }
+    
+    #check:checked ~ .navbar_menu:active {
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    .navbar_toggle .bar{
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar_item{
+        width: 100%;
+    }
+
+    .navbar_links{
+        text-align: center;
+        padding: 1rem;
+        width: 95%;
+        display: table;
+        border-radius: 15px;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar_menu li {padding: 10px;}
+
+}
+
+
+
+/* BACKGROUND DESIGNS */
 .gradient-shape{
     transform: origin;
-    overflow: hidden;
     box-sizing: border-box;
-    /*background-color: violet;*/
 }
 
 .gradient-ellipse{
@@ -93,7 +179,7 @@ body{
     justify-content: center;
     width: 777.934px;
   height: 779.326px;
-    top: 0;
+    top: 100px;
     left: 0;
     margin: 0 auto;
     flex-shrink: 0;
@@ -101,36 +187,114 @@ body{
     position: relative;
     transform: rotate(-48.32deg);
     filter:blur(10px);
-    background: linear-gradient(123deg, #9747FF -37.16%, #EC5453 -20.19%, rgba(151, 71, 255, 0.00) 51.91%) no-repeat center;
+    background: linear-gradient(123deg, rgba(151,71,255,1) -20.19%, rgb(131, 44, 119) -37.16%, rgba(151,71,255,0)51.91%);
 }
 
-.name-container {
+/* SECTIONS */
+
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile-page{
+    display: flex;
+    justify-content: left;
+    gap: 5rem;
+    height: 80vh;
     position: relative;
-    width: 979px;
+    width: 100%;
+    max-width: 979px;
     height: 156px;
-    margin: 0 auto;
-  }
+    margin:  auto;
+    top: -300px;
+}
 
 .myname {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
     position: absolute;
-    width: 1152px;
-    top: -1px;
+    top: -200px;
     left: 0;
-    font-family: Ubuntu, sans-serif;
     font-size: 130px;
     font-weight: 700;
     line-height: 149.37px;
     text-align: left;
     white-space: nowrap;
     background-color: transparent;
-    background: linear-gradient(179.32deg, #ec5452, #370947);
+    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
+}
 
-  .myname:hover {
-    /*wala pa*/
-  }
+.section_text{
+    align-self: center;
+    text-align: left;
+    white-space: wrap;
+    color: rgba(255,255,255,70%);
+    margin-top: 1.9rem;
+}
+
+.section_text_h1{
+    font-size: 4.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 4.5rem;
+}
+
+.section_text_p{
+    font-weight: 500;
+    font-size: 1.75rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+    word-wrap: wrap;
+    font-family: Helvetica;
+    font-style: italic;
+}
+
+#socials-container{
+    display: flex;
+    margin-top: 2.5rem;
+    gap: 1rem;
+}
+
+/* ICONS */
+.socials-icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+
+/* SKILL PAGE */
+#skill-page{
+}
+
+.title-icon{
+    text-align: center;
+    display: flex;
+    width: 215px;
+    height: 58px;
+    background: #fff;
+    border: 2px solid #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 5.4px;
+    text-transform: uppercase;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #211C1C;
+    border-radius: 70px;
+
+}
+
