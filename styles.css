@@ -234,13 +234,14 @@ section{
 
 .myname_container {
     display: flex;
-    align-items: center;
+    align-items: left;
     position: relative;
     font-size: 7.56rem;
     font-weight: 700;
     line-height: 1;
     text-align: left;
     white-space: nowrap;
+    left: -10%;
 
     background-color: transparent;
     background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
@@ -375,7 +376,7 @@ section{
     font-weight: 700;
     letter-spacing: 4.4px;
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 0 15px;
     border-radius: 70px;
 }
 
@@ -488,10 +489,37 @@ article .icon{
 }
 
 /* INTERESTS SECTION */
-#interests_section {}
+#interests_section{
+    position: relative;
+    margin: 2% auto;
+    width: 98%;
+    padding: 2%;
+    top: -400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 /* PROJECTS SECTION */
-#projects_section {}
+#projects_section {
+    position: relative;
+    margin: 2% auto;
+    width: 98%;
+    padding: 2%;
+    top: -400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
 
 /* ACHIEVEMENTS SECTION */
-#achievements_section {}
+#achievements_section {
+    position: relative;
+    margin: 2% auto;
+    width: 98%;
+    padding: 2%;
+    top: -400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
