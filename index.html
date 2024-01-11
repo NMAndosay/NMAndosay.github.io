@@ -10,38 +10,47 @@
     </head>
     <body>
         <nav class="navbar">
+            <div class="navbar_toggle" id="mobile_menu">
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <input type="checkbox" id="check">
+            </div>
             <div class="navbar_container">
-                <div class="navbar_toggle" id="mobile_menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <input type="checkbox" id="check">
-                </div>
                 <ul class="navbar_menu">
-                    <li class="navbar_item"><a href="#about" class="navbar_links">ABOUT</a></li>
-                    <li class="navbar_item"><a href="#skills" class="navbar_links">SKILLS</a></li>
-                    <li class="navbar_item"><a href="#interests" class="navbar_links">INTERESTS</a></li>
-                    <li class="navbar_item"><a href="#projects" class="navbar_links">PROJECTS</a></li>
-                    <li class="navbar_item"><a href="#achievements" class="navbar_links">ACHIEVEMENTS</a></li>
+                    <li class="navbar_item"><a href="#profile_section" class="navbar_links">ABOUT</a></li>
+                    <li class="navbar_item"><a href="#skills_section" class="navbar_links">SKILLS</a></li>
+                    <li class="navbar_item"><a href="#interests_section" class="navbar_links">INTERESTS</a></li>
+                    <li class="navbar_item"><a href="#projects_section" class="navbar_links">PROJECTS</a></li>
+                    <li class="navbar_item"><a href="#achievements_section" class="navbar_links">ACHIEVEMENTS</a></li>
                 </ul>
-                <label for="check" class="open_menu"><i class="fas fa-bars"></i></label>
             </div>
         </nav>
-
-        <div class="gradient_shape"><div class="gradient_ellipse"></div><div>
-
+        <div class="gradient_shape">
+            <div class="gradient_ellipse"></div>
+        </div>
         <section id="profile_section">
-            <div class="myname">Noela Andosay</div>
+            <div class="myname_container">Noela Andosay</div>
             <div class="section_text">
-                <h1 class="section_text_h1">Your Future<br>Full-Stack Developer</h1>
+                <h1 class="section_text_h1">
+                    An Aspiring<br>
+                    <div class="oneline_container">
+                        <ul class="scrolling_text">
+                            <li>Front-End Developer</li>
+                            <li>Back-End Developer</li>
+                            <li>Full-Stack Developer</li>
+                            <li>Designer</li>
+                        </ul>
+                    </div>
+                </h1>
                 <p class="section_text_p">A B.S. Computer Science Student <br> studying at Mapúa Malayan Colleges Laguna</p>
             
                 <div id="socials_container">
                     <div class="socials_container">
-                        <a href=""></a><img src="./logos/facebook.png" alt="facebook-account" class="socials_icon" />Facebook</a>
+                        <a href=""></a><img src="./logos/facebook-logo.png" alt="facebook-account" class="socials_icon" />Facebook</a>
                     </div>
                     <div class="socials_container">
-                        <a href=""></a><img src="./logos/github.png" alt="github-account" class="socials_icon" />Github</a>
+                        <a href=""></a><img src="./logos/github-logo.png" alt="github-account" class="socials_icon" />Github</a>
                     </div>    
                 </div>
             </div>
@@ -149,6 +158,15 @@
                     </div>
                 </div>
             </div> 
+        </section>
+        <section id="interests_section">
+
+        </section>
+        <section id="projects_section">
+            
+        </section>
+        <section id="achievements_section">
+            
         </section>
     </body>
 </html>
