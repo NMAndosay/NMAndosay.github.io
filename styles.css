@@ -399,6 +399,7 @@ section{
 .title_icon {
     text-align: center;
     display: inline-block;
+    margin: 8px auto;
     min-width: 10.438rem;
     height: 35px;
     line-height: 35px;
@@ -446,6 +447,11 @@ section{
 .skills_details_container{
     justify-content: center;
     flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-radius: 30px;
+    background-color: #161414;
     
 }
 
@@ -485,19 +491,21 @@ article .icon{
     background-color: transparent;
     border: rgb(53,53,53) 0.2rem solid;
     border-color: rgba(10, 1, 14, 0.25);
-    box-shadow: -2px -2px 4px 10px rgba(15,3,20,0.25) inset;
 }
 
 .details_container:hover{
     transform: translateY(-8px);
     transition: transform 200ms ease-in-out;
-    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);;
-    box-shadow: -2px 9px 20px 10px rgba(15,3,20,0.25)inset;
+    box-shadow: -2px 9px 20px 10px rgba(15,3,20,0.25);
+    border: unset;
+    border-top: 5px solid transparent;
+    background: linear-gradient(176deg, #211C1C, #1a1616) padding-box,
+                linear-gradient(to right, #db4e4c 15.74%, #370947 153.87%) border-box;
+    
 }
 
 .details_container:hover .skills_sub_title{
     color: #8e329a;
-    text-shadow: 2px 2px 4px rgba(176, 161, 209, 0.362)
 
 }
 
