@@ -328,37 +328,61 @@ section{
 
 #socials_container{
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-.socials_container {
+.social_link {
+    display: flex;
+}
+
+.socials_link a {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    color: #979292;
+    box-shadow: 0 0 20px 10px rgba(14, 7, 7, 0.295);
+    margin-right: 10px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; 
-    padding: 8px 13px 8px 0;
-    border: 2px solid #f0afaf92;
-    border-radius: 20px;
-    text-decoration: none;
-    color: #f5e3e3c9;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    gap: 1rem;
-    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
 }
 
-.socials_container:hover{
-    transform: translateY(-4px);
-    transition: transform 200ms ease-in-out;
-    box-shadow: -2px 9px 20px 2px rgba(33, 13, 107, 0.548);
+.socials_link a:hover {
+    transform: translateY(-10px);
 }
 
-.socials_icon{
-    height: 2.5rem;
-    width: 2.5rem;
+.socials_link a .fab {
+    font-size: 35px;
+    line-height: 80px;
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
 }
 
+.socials_link a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
+    position: absolute;
+    transition: top 0.5s;
+}
+
+.socials_link a:hover .fab,
+.socials_link a:hover::after,
+.socials_link a .fab:hover::after {
+    color: #380707;
+    top: 0;
+    transition: 0.5s;
+}
 
 /* SKILLS SECTION */
 #skills_section{
