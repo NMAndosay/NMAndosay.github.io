@@ -57,15 +57,15 @@ I applied all the concepts taught during the course, including:
 
 ## Insights
 
-- LT0: Understanding branches, commits, and pull requests is foundational for collaborative coding, fostering efficient teamwork.
-- LT1: Structuring web content, styling with CSS, and creating responsive designs are crucial skills, balancing creativity and functionality.
-- M1M2: Understanding HTML's role in structuring content and CSS's role in styling allows for the creation of visually appealing and well-organized web pages. The exercise laid the groundwork for building more complex web applications.
+- **LT0**: Understanding branches, commits, and pull requests is foundational for collaborative coding, fostering efficient teamwork.
+- **LT1**: Structuring web content, styling with CSS, and creating responsive designs are crucial skills, balancing creativity and functionality.
+- **M1M2**: Understanding HTML's role in structuring content and CSS's role in styling allows for the creation of visually appealing and well-organized web pages. The exercise laid the groundwork for building more complex web applications.
 
 ## Struggles
 
-- LT0: Initial confusion with GitHub setup, resolved with external help and tutorials.
-- LT1: Time constraints and fixing errors during HTML/CSS styling.
-- M1M2: No significant struggles due to prior knowledge.
+- **LT0**: Initial confusion with GitHub setup, resolved with external help and tutorials.
+- **LT1**: Time constraints and fixing errors during HTML/CSS styling.
+- **M1M2**: No significant struggles due to prior knowledge.
 
 ## Improvements
 
@@ -76,6 +76,9 @@ I applied all the concepts taught during the course, including:
 
 ## Other Thoughts
 
-- Experimentation and Exploration: Experimenting and exploring beyond the basics of HTML, CSS, and JavaScript are crucial for a deeper understanding and improvement.
-- Continuous Learning: The process of continuous learning, driven by curiosity and experimentation, contributes significantly to skill enhancement.
-- Iterative Growth: An iterative approach to learning, regularly refining coding and design skills, fuels continuous improvement.
+- **Experimentation and Exploration**: Experimenting and exploring beyond the basics of HTML, CSS, and JavaScript are crucial for a deeper understanding and improvement.
+- **Continuous Learning**: The process of continuous learning, driven by curiosity and experimentation, contributes significantly to skill enhancement.
+- **Iterative Growth**: An iterative approach to learning, regularly refining coding and design skills, fuels continuous improvement.
+
+##
+![Kerbit GIF](https://i.pinimg.com/originals/47/60/f4/4760f404973e95b945f1c91adcd3c1d4.gif)
