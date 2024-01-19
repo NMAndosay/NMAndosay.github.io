@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     }
 
+    // Observe each section
     observeSection("skills_section");
     observeSection("about_section");
     observeSection("projects_section");

@@ -622,14 +622,14 @@ section{
 #skills_section {
     position: relative;
     margin: 5% auto;
-    height: auto;
-    width: 98%;
     padding: 2%;
+    width: 98%;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     opacity: 0; 
-    transform: translateY(30px); 
+    transform: translateY(20px); 
     transition: opacity .5s ease-in-out, transform .5s ease-in-out; 
 }
 
@@ -649,108 +649,112 @@ section{
     }
 }
 
-.skills_icon{
+.skills_icon {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-.skills_sub_title{
+.skills_sub_title {
     color: rgb(134, 134, 134);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
 }
 
-.details_container:hover .skills_sub_title{
+.details_container:hover .skills_sub_title {
     color: #d2b9b9;
 }
 
-.aboutskills_containers{
+.aboutskills_containers {
     gap: 2rem;
     margin: 2rem;
 }
 
-.skills_details_container{
+.skills_details_container {
     justify-content: center;
     flex-direction: column;
-    width: 80%;
+    width: 100%; /* Adjusted width for better responsiveness */
+    max-width: 600px; /* Set a maximum width for larger screens */
     margin: 0 auto;
-    padding-top: 25px;
+    padding: 25px; /* Adjusted padding for better spacing */
     border-radius: 30px;
     background-color: #16141498;
-    
 }
 
 .aboutskills_containers,
-.skills_details_container{
+.skills_details_container {
     display: flex;
     flex-wrap: wrap;
 }
 
-article{
+article {
     display: flex;
-    width: 10rem;
+    width: 100%; /* Adjusted width for better responsiveness */
+    max-width: 300px; /* Set a maximum width for larger screens */
     justify-content: space-around;
     gap: 0.5rem;
 }
 
-article .icon{
-    cursor: default;
-}
-
-.article_container{
+.article_container {
     display: flex;
     text-align: initial;
     flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
+    flex-direction: column; /* Adjusted direction for smaller screens */
+    gap: 1rem; /* Adjusted gap for better spacing */
     justify-content: space-around;
 }
 
-.details_container{
-    padding: 2.5rem 2.5rem 3.5rem 2.5rem;
+.details_container {
+    padding: 2.5rem;
     flex: 1;
     border-radius: 2rem;
     text-align: center;
     transition: transform 200ms ease-in-out;
-
     background-color: transparent;
-    border: rgb(53,53,53) 0.2rem solid;
+    border: rgb(53, 53, 53) 0.2rem solid;
     border-color: rgba(10, 1, 14, 0.25);
+    max-width: 600px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the container on larger screens */
 }
 
-.details_container:hover{
+.details_container:hover {
     transform: translateY(-8px);
     transition: transform 200ms ease-in-out;
-    box-shadow: -2px 9px 20px 10px rgba(15,3,20,0.25);
+    box-shadow: -2px 9px 20px 10px rgba(15, 3, 20, 0.25);
     border: unset;
     border-top: 5px solid transparent;
-    background: linear-gradient(176deg, #211C1C, #1a1616b7) padding-box,
-                linear-gradient(to right, #db4e4c 15.74%, #370947 153.87%) border-box;
-    
+    background: linear-gradient(176deg, #211c1c, #1a1616b7) padding-box,
+        linear-gradient(to right, #db4e4c 15.74%, #370947 153.87%) border-box;
 }
 
-.details_container:hover .skills_sub_title{
+.details_container:hover .skills_sub_title {
     color: #8e329a;
-
 }
 
-.skills_example{
-    color: #9593A7;
+.skills_example {
+    color: #9593a7;
 }
 
-.details_container:hover .skills_example{
+.details_container:hover .skills_example {
     color: #e0c5c5;
 }
 
-.skills_level{
+.skills_level {
     font-style: italic;
     color: #453b3b;
 }
 
-.details_container:hover .skills_level{
+.details_container:hover .skills_level {
     color: #24a8eab0;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .article_container {
+        flex-direction: row; /* Adjusted direction for larger screens */
+    }
+}
+
 
 
 /* --------------PROJECTS SECTION-------------- */
@@ -953,11 +957,13 @@ article .icon{
 
 .achievements_container img{
     position: absolute;
-    width: 40px;
+    width: 50px;
+    height: 45px;
     border-radius: 50%;
     right: -20px;
     top: 32px;
     z-index: 10;
+    background-color: #d8cddd;
 }
 
 .right_container img{
@@ -989,11 +995,17 @@ article .icon{
 
 .text_box h2{
     font-weight: 600;
+    color:#c52e5e;
 }
 
 .text_box small{
     display: inline-block;
     margin-bottom: 15px;
+    color:#150f1d98;
+}
+
+.text_box p{
+    color: #e9cccc;
 }
 
 .left_container_arrow{
