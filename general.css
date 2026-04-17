@@ -67,3 +67,18 @@ section {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
 }
+
+/* --------------Toggle Theme Btn-------------- */
+.theme_btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.theme_btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}

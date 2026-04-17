@@ -31,13 +31,41 @@ function observeSection(sectionId) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 section.classList.add("animate");
-            } else {
-                section.classList.remove("animate");
+                setActiveLink(sectionId); // 👈 ADD THIS
             }
         });
     }, options);
 
     observer.observe(section);
+}
+
+function setActiveLink(sectionId) {
+    const links = document.querySelectorAll(".navbar_links");
+
+    links.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === `#${sectionId}`) {
+            link.classList.add("active");
+        }
+    });
+}
+
+function setupThemeToggle() {
+    const toggleBtn = document.getElementById("themeToggle");
+    const icon = document.getElementById("themeIcon");
+
+    if (!toggleBtn || !icon) return;
+
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+
+        if (document.body.classList.contains("light-mode")) {
+            icon.classList.replace("fa-moon", "fa-sun");
+        } else {
+            icon.classList.replace("fa-sun", "fa-moon");
+        }
+    });
 }
 
 async function loadAllSections() {
@@ -53,6 +81,7 @@ async function loadAllSections() {
 
     // AFTER loading, setup JS features
     setupMobileMenu();
+    setupThemeToggle();
 
     observeSection("home_section");
     observeSection("about_section");
