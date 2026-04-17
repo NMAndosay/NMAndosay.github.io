@@ -1,0 +1,71 @@
+/* --------------CONTACTS SECTION-------------- */
+#contacts_section{
+    text-align: center;
+    padding: 5%;
+    background-color: rgb(44, 35, 37);
+    color: rgb(212, 210, 210);
+}
+
+#socials_container{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
+.social_link {
+    display: flex;
+}
+
+.socials_link a {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #979292;
+    box-shadow: 0 0 20px 10px rgba(14, 7, 7, 0.151);
+    margin-right: 10px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.socials_link a:hover {
+    transform: translateY(-10px);
+}
+
+.socials_link a .fab {
+    font-size: 25px;
+    line-height: 50px;
+    position: relative;
+    z-index: 10;
+    transition: color 0.5s;
+}
+
+
+.socials_link a::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -90px;
+    left: 0;
+    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
+    position: absolute;
+    transition: top 0.5s;
+}
+
+.socials_link a:hover .fab,
+.socials_link a:hover::after,
+.socials_link a .fab:hover::after {
+    color: #f7f7f7;
+    top: 0;
+    transition: 0.5s;
+}

@@ -1,0 +1,295 @@
+#home_section {
+    position: relative;
+    margin: auto auto 10% auto;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 100px;
+}
+
+.home_container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    max-width: 960px;
+    width: 80%;
+    height: auto;
+    margin: 2px auto;
+    z-index: 0;
+}
+
+.myname_container {
+    display: flex;
+    align-items: left;
+    position: relative;
+    font-size: 7.56rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: left;
+    white-space: wrap;
+
+    background-color: transparent;
+    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 1s linear forwards;
+}
+
+.section_text_h1{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 4.5rem;
+    color: rgba(255,255,255,70%);
+    animation: fadeIn 1s linear forwards;
+}
+
+.section_text_h1.greetings{
+    margin-bottom: -10px;
+    text-align: left;
+    align-items: left;
+    position: relative;
+    animation: fadeIn 1s linear forwards;
+}
+
+.oneline_container {
+    align-self: left;
+    width: 100%;
+    height: 1em;
+    overflow: hidden;
+}
+
+.oneline_container ul, li{
+    height: 13.5em;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.oneline_container li{
+    list-style-type: none;
+    margin: 0px 0 1px 0;
+    height: 1em !important;
+    padding: 0px 0 0px 0;
+    width: 100%;
+}
+
+.scrolling_text{
+    animation-name: titleflip;
+    animation: titleflip 5s ease-in-out infinite;
+}
+
+@keyframes titleflip {
+    0%, 25%{
+        transform: translateY(-0.25em);
+    }
+    25%, 50%{
+        transform: translateY(-3.40em);
+    }
+    50%, 75%{
+        transform: translateY(-1.30em);
+    }
+    75%, 100%{
+        transform: translateY(-2.30em);
+    }
+    100%, 0%{
+        transform: translateY(-0.25em);
+    }
+}.scrolling_text{
+    animation-name: titleflip;
+    animation: titleflip 5s ease-in-out infinite;
+}
+
+@keyframes titleflip {
+    0%, 25%{
+        transform: translateY(-0.25em);
+    }
+    25%, 50%{
+        transform: translateY(-3.40em);
+    }
+    50%, 75%{
+        transform: translateY(-1.30em);
+    }
+    75%, 100%{
+        transform: translateY(-2.30em);
+    }
+    100%, 0%{
+        transform: translateY(-0.25em);
+    }
+}
+
+
+.section_text_p{
+    font-weight: 500;
+    font-size: 1.23rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.9rem;
+    word-wrap: wrap;
+    align-self: left;
+    font-family: Helvetica;
+    font-style: italic;
+
+    color: rgba(238, 227, 227, 0.479);
+    animation: fadeIn 1s linear forwards;
+}
+
+.Contact_Btn {
+    background-color: #979292;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 2px solid #979292;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: transform 0.3s, color 0.3s, border-color 0.3s;
+    animation: fadeIn 1s linear forwards;
+}
+
+.Contact_Btn:hover {
+    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    transform: translateY(-3px);
+    border-color: #ffffffaf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.568);
+}
+
+.Contact_Btn.active {
+    background-color: #db4e4c;
+    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    border: 2px solid #db4e4c;
+}
+
+.Contact_Btn.active:hover {
+    background-color: #370947;
+    border-color: #fff;
+    background: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.568);
+}
+
+
+@media (max-width: 960px){
+    .home_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        max-width: 960px;
+        width: 80%;
+        height: auto;
+        margin: 2px auto;
+        z-index: 0;
+    }
+
+    .myname_container {
+        font-size: 5.56rem; 
+    }
+
+    .section_text_h1 {
+        font-size: 2.5rem; 
+        line-height: 3.5rem;
+    }
+
+
+    .oneline_container ul,
+    .oneline_container li {
+        height: auto; 
+    }
+
+    .section_text_p {
+        font-size: 1rem; 
+        line-height: 1.5rem;
+    }
+
+}
+
+@media (max-width: 600px){
+    .home_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        max-width: 500px;
+        width: 80%;
+        height: auto;
+        margin: 2px auto;
+        z-index: 0;
+    }
+
+    .myname_container {
+        font-size: 5.56rem; 
+    }
+
+    .section_text_h1 {
+        font-size: 2rem; 
+        line-height: 2.5rem;
+    }
+
+
+    .oneline_container ul,
+    .oneline_container li {
+        height: auto; 
+    }
+}
+
+@media (max-width: 400px){
+    .section_text_h1 {
+        font-size: 1.5rem; 
+        line-height: 2.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home_container > h1:nth-child(1),
+#home_container > div:nth-child(2),
+#home_container > h1:nth-child(3),
+#home_container > p:nth-child(4),
+#home_container > a:nth-child(5) {
+    opacity: 0; 
+}
+
+#home_container > h1:nth-child(1) {
+    animation-delay: 0s;
+    opacity: 1;
+}
+
+#home_container > div:nth-child(2) {
+    animation-delay: 1s;
+}
+
+#home_container > h1:nth-child(3),
+#home_container > p:nth-child(4) {
+    animation-delay: 2s;
+}
+
+#home_container > a:nth-child(5) {
+    animation-delay: 3s;
+}

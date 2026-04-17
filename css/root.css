@@ -1,0 +1,20 @@
+:root {
+  /* Colors */
+  --primary-color: #ff4d6d;
+  --secondary-color: #1f1f1f;
+  --background-color: #0d0d0d;
+  --text-color: #ffffff;
+  --muted-text: #b3b3b3;
+
+  /* Font */
+  --main-font: "Poppins", sans-serif;
+
+  /* Spacing */
+  --section-padding: 80px;
+
+  /* Border Radius */
+  --radius: 12px;
+
+  /* Shadows */
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}

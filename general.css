@@ -1,0 +1,69 @@
+@import url("./css/root.css");
+
+@import url("./css/navbar.css");
+@import url("./css/home.css");
+@import url("./css/about.css");
+@import url("./css/skills.css");
+@import url("./css/projects.css");
+@import url("./css/experience.css");
+@import url("./css/education.css");
+@import url("./css/practicum.css");
+@import url("./css/contacts.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Verdana;
+    font-weight: 700;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 65px;
+    background-color: #211C1C;
+    overflow-x: hidden;
+}
+
+/* --------------SECTIONS-------------- */
+
+section {
+    min-height: 100vh;
+    scroll-margin-top: 100px;
+    box-sizing: border-box;
+}
+
+.section_container{
+    display: flex;
+}
+
+.title_icon {
+    text-align: center;
+    display: inline-block;
+    margin: 5px auto;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px; 
+    font-weight: 00;
+    letter-spacing: 4.4px;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.sub_title{
+    margin: 1px auto;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    background-color: #370947;
+    border-color: #fff;
+    background: linear-gradient(to right, #db4e4c 35.74%, #370947 153.87%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}

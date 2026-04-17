@@ -1,0 +1,135 @@
+/* --------------SKILLS SECTION-------------- */
+#skills_section {
+    position: relative;
+    margin: 4% auto;
+    padding: 2%;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out; 
+}
+
+#skills_section.animate {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+@keyframes moveup {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills_icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.skills_sub_title {
+    color: rgb(134, 134, 134);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.details_container:hover .skills_sub_title {
+    color: #d2b9b9;
+}
+
+.aboutskills_containers {
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.skills_details_container {
+    justify-content: center;
+    flex-direction: column;
+    width: 80%; 
+    margin: 0 auto;
+    padding: 25px; 
+    border-radius: 30px;
+    background-color: #16141498;
+}
+
+.aboutskills_containers,
+.skills_details_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    display: flex;
+    width: 80%; 
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+.article_container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    gap: 1rem; 
+    justify-content: space-around;
+}
+
+.details_container {
+    padding: 2.5rem;
+    flex: 1;
+    border-radius: 2rem;
+    text-align: center;
+    transition: transform 200ms ease-in-out;
+    background-color: transparent;
+    border: rgb(53, 53, 53) 0.2rem solid;
+    border-color: rgba(10, 1, 14, 0.25);
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+.details_container:hover {
+    transform: translateY(-8px);
+    transition: transform 200ms ease-in-out;
+    box-shadow: -2px 9px 20px 10px rgba(15, 3, 20, 0.25);
+    border: unset;
+    border-top: 5px solid transparent;
+    background: linear-gradient(176deg, #211c1c, #1a1616b7) padding-box,
+        linear-gradient(to right, #db4e4c 15.74%, #370947 153.87%) border-box;
+}
+
+.details_container:hover .skills_sub_title {
+    color: #8e329a;
+}
+
+.skills_example {
+    color: #9593a7;
+}
+
+.details_container:hover .skills_example {
+    color: #e0c5c5;
+}
+
+.skills_level {
+    font-style: italic;
+    color: #453b3b;
+}
+
+.details_container:hover .skills_level {
+    color: #24a8eab0;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .article_container {
+        flex-direction: row;
+    }
+    
+}

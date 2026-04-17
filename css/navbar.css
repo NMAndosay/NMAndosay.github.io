@@ -1,0 +1,81 @@
+.navbar {
+    background: linear-gradient(176deg, #211C1C 0%, #181515 100%);
+    height: 65px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    border: 2px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.navbar_container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar_logo {
+    background-color: #db4e4c;
+    background-image: linear-gradient(155deg, #db4e4c 15.74%, #370947 153.87%);
+    background-size: 100%;
+    -webkit-background-clip: text;  
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.navbar_item{
+    height: 100%;
+    padding: 0.995rem 1.2rem;
+}
+
+.navbar_links_group {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar_links {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.navbar_links:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.navbar_links:active {
+    background: linear-gradient(45deg, #EC5453, #9747FF);
+    color: white;
+}
+
+.navbar_special .navbar_links {
+    background: rgba(236, 84, 83, 0.15);
+    border: 1px solid rgba(236, 84, 83, 0.4);
+}
+
+.navbar_special .navbar_links:hover {
+    background: rgba(236, 84, 83, 0.25);
+}
