@@ -17,6 +17,13 @@
   --theme-btn-border: rgba(0, 0, 0, 0.15);
   --theme-btn-text: #111;
   --theme-btn-hover: rgba(0, 0, 0, 0.1);
+
+  --home-name-gradient-1: #db4e4c;
+  --home-name-gradient-2: #370947;
+
+  --home-greeting: rgba(0, 0, 0, 0.7);
+  --home-description: #444;
+  --home-quote: #666;
 }
 
 body.dark-mode {
@@ -38,4 +45,11 @@ body.dark-mode {
   --theme-btn-border: rgba(255, 255, 255, 0.15);
   --theme-btn-text: #ffffff;
   --theme-btn-hover: rgba(255, 255, 255, 0.15);
+
+  --home-name-gradient-1: #ff4d6d;
+  --home-name-gradient-2: #7b2cbf;
+
+  --home-greeting: rgba(255, 255, 255, 0.7);
+  --home-description: rgba(255, 255, 255, 0.85);
+  --home-quote: rgba(255, 255, 255, 0.5);
 }
