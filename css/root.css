@@ -1,20 +1,41 @@
 :root {
-  /* Colors */
-  --primary-color: #ff4d6d;
-  --secondary-color: #1f1f1f;
-  --background-color: #0d0d0d;
+  --body-bg-color: #ffffff;
+
+  --text-color: #111;
+  --muted-text: #555;
+
+  --navbar-bg: #ffffff;
+  --navbar-border: rgba(0, 0, 0, 0.08);
+  --navbar-hover-bg: rgba(0, 0, 0, 0.05);
+  --navbar-active-bg: rgba(0, 0, 0, 0.08);
+
+  --special-bg: rgba(236, 84, 83, 0.12);
+  --special-border: rgba(236, 84, 83, 0.4);
+  --special-hover: rgba(236, 84, 83, 0.2);
+
+  --theme-btn-bg: rgba(0, 0, 0, 0.05);
+  --theme-btn-border: rgba(0, 0, 0, 0.15);
+  --theme-btn-text: #111;
+  --theme-btn-hover: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode {
+  --body-bg-color: #211C1C;
+
   --text-color: #ffffff;
-  --muted-text: #b3b3b3;
+  --muted-text: rgba(255, 255, 255, 0.6);
 
-  /* Font */
-  --main-font: "Poppins", sans-serif;
+  --navbar-bg: linear-gradient(176deg, #211C1C 0%, #181515 100%);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+  --navbar-hover-bg: rgba(255, 255, 255, 0.08);
+  --navbar-active-bg: rgba(255, 255, 255, 0.12);
 
-  /* Spacing */
-  --section-padding: 80px;
+  --special-bg: rgba(236, 84, 83, 0.15);
+  --special-border: rgba(236, 84, 83, 0.4);
+  --special-hover: rgba(236, 84, 83, 0.25);
 
-  /* Border Radius */
-  --radius: 12px;
-
-  /* Shadows */
-  --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  --theme-btn-bg: rgba(255, 255, 255, 0.08);
+  --theme-btn-border: rgba(255, 255, 255, 0.15);
+  --theme-btn-text: #ffffff;
+  --theme-btn-hover: rgba(255, 255, 255, 0.15);
 }

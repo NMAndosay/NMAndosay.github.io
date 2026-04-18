@@ -51,6 +51,7 @@ function setActiveLink(sectionId) {
     });
 }
 
+// THEME TOGGLE ----------------------------------------------------
 function setupThemeToggle() {
     const toggleBtn = document.getElementById("themeToggle");
     const icon = document.getElementById("themeIcon");
@@ -58,9 +59,11 @@ function setupThemeToggle() {
     if (!toggleBtn || !icon) return;
 
     toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+        document.body.classList.toggle("dark-mode");
 
-        if (document.body.classList.contains("light-mode")) {
+        const isDark = document.body.classList.contains("dark-mode");
+
+        if (isDark) {
             icon.classList.replace("fa-moon", "fa-sun");
         } else {
             icon.classList.replace("fa-sun", "fa-moon");
