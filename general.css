@@ -50,12 +50,18 @@ section {
 
 .section_container{
     display: flex;
+    padding: auto 15px;
+}
+
+.sectiontitle_container {
+    display: block;
+    background-color: rgba(236, 197, 203, 0.281);
 }
 
 .title_icon {
     text-align: center;
     display: inline-block;
-    margin: 5px auto;
+    margin: 2px auto;
     height: 35px;
     line-height: 35px;
     font-size: 20px; 
@@ -67,9 +73,8 @@ section {
 }
 
 .sub_title{
-    margin: 1px auto;
-    height: 35px;
-    line-height: 35px;
+    margin-bottom: 20px;
+    line-height: 20px;
     font-size: 16px;
     background-color: #370947;
     border-color: #fff;

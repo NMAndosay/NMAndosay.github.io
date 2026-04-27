@@ -85,6 +85,7 @@ async function loadAllSections() {
     // AFTER loading, setup JS features
     setupMobileMenu();
     setupThemeToggle();
+    initProjects();
 
     observeSection("home_section");
     observeSection("about_section");
