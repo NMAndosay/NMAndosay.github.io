@@ -89,6 +89,7 @@ async function loadAllSections() {
     // RENDER SECTIONS
     initProjects();
     initSkills();
+    initExperience();
 
     observeSection("home_section");
     observeSection("about_section");

@@ -87,7 +87,8 @@ section {
 
 /* ================= Specific Styles for Section ================= */
 #projects_section,
-#skills_section {
+#skills_section,
+#experience_section {
     position: relative;
     margin: 10% auto;
     height: auto;
@@ -102,7 +103,8 @@ section {
 }
 
 #projects_section.animate,
-#skills_section.animate {
+#skills_section.animate,
+#experience_section.animate {
     opacity: 1;
     transform: translateY(0);
 }

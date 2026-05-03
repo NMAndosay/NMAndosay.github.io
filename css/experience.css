@@ -1,195 +1,138 @@
-/* --------------ACHIEVEMENTS SECTION-------------- */
-#achievements_section {
+/* ===== TIMELINE WRAPPER ===== */
+.experience_timeline {
     position: relative;
-    margin: 10% auto;
-    height: auto;
-    width: 98%;
-    padding: 2%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background: #1b1717d7;
-    opacity: 0; 
-    transform: translateY(30px); 
-    transition: opacity .5s ease-in-out, transform .5s ease-in-out; 
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px 0;
 }
 
-#achievements_section.animate {
-    opacity: 1;
-    transform: translateY(0); 
+/* CENTER LINE */
+.experience_timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(#a812ce, #c24f73);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-
-.timeline{
-    position: relative;
-    max-width: 1200px;
-    margin: 100px auto;
-}
-
-.achievements_container{
-    padding: 10px 50px;
+/* EACH CARD WRAPPER */
+.experience-card {
     position: relative;
     width: 50%;
-    animation: movedown 1s linear forwards;
-    opacity: 0;
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+    padding: 20px;
 }
 
-.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes movedown{
-    0%{
-        opacity: 1;
-        transform: translateY(-30px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-.achievements_container:nth-child(1){
-    animation-delay: 0s;
-}
-.achievements_container:nth-child(2){
-    animation-delay: 2s;
-}
-.achievements_container:nth-child(3){
-    animation-delay: 3.5s;
-}
-.achievements_container:nth-child(4){
-    animation-delay: 5s;
-}
-
-.text_box{
-    padding: 20px 30px;
-    background: #c599da;
-    position: relative;
-    border-radius: 15px;
-    font-size: 15px;
-}
-
-.left_container{
+/* LEFT / RIGHT POSITIONING */
+.experience-card:nth-child(odd) {
     left: 0;
 }
 
-.right_container{
+.experience-card:nth-child(even) {
     left: 50%;
 }
 
-.achievements_container img{
-    position: absolute;
-    width: 50px;
-    height: 45px;
-    border-radius: 50%;
-    right: -20px;
-    top: 32px;
-    z-index: 10;
-    background-color: #d8cddd;
-}
-
-.right_container img{
-    left: -20px;
-}
-
-.timeline::after{
+/* DOT ON TIMELINE */
+.experience-card::before {
     content: '';
     position: absolute;
-    width: 6px;
-    height: 100%;
-    background: linear-gradient(rgb(168, 18, 206), #c24f73);
-    top: 0;
-    left: 50%;
-    margin-left: -3px;
-    z-index: -1;
-    animation: moveline 6s linear forwards;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 3px solid #c24f73;
+    border-radius: 50%;
+    top: 35px;
+    z-index: 10;
 }
 
-@keyframes moveline{
-    0%{
-        height: 0;
-    }
-
-    100%{
-        height: 100%;
-    }
+.experience-card:nth-child(odd)::before {
+    right: -8px;
 }
 
-.text_box h2{
-    font-weight: 600;
-    color:#c52e5e;
+.experience-card:nth-child(even)::before {
+    left: -8px;
 }
 
-.text_box small{
+/* ===== WINDOW STYLE ===== */
+.experience-card {
+    box-sizing: border-box;
+}
+
+/* WINDOW FRAME */
+.experience-header {
+    background: var(--win-header);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--win-border);
+    color: var(--text-dark);
+}
+
+.experience-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* CARD BODY */
+.experience-body {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+
+    background: var(--win-bg);
+    border: 1px solid var(--win-border);
+    border-top: none;
+
+    border-radius: 0 0 14px 14px;
+    color: var(--text-light);
+}
+
+/* LOGO STYLE (APP ICON FEEL) */
+.experience-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: white;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+/* TEXT */
+.experience-role {
     display: inline-block;
-    margin-bottom: 15px;
-    color:#150f1d98;
+    padding: 4px 10px;
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    background: var(--pill-bg);
+    color: var(--text-dark);
+
+    border: 1px solid var(--win-border);
+
+    width: fit-content;
+    margin-bottom: 6px;
 }
 
-.text_box p{
-    color: #e9cccc;
-    font-weight: 550;
+.experience-date {
+    font-size: 11px;
+    font-style: italic;
+    margin-left: 10px;
+    color: var(--text-mid);
 }
 
-.left_container_arrow{
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 28px;
-    z-index: 1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid #c599da;
-    right: -15px;
+.experience-desc {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    font-size: 12px;
+    color: var(--text-light);
 }
 
-.right_container_arrow{
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 28px;
-    z-index: 1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 15px solid #c599da;
-    left: -15px;
-}
-
-@media (max-width: 600px){
-    .timeline{
-        margin: 50px auto;
-    }
-    .timeline::after{
-        left: 31px;
-    }
-    .achievements_container{
-        width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
-    }
-    .text_box{
-        font-size: 13px;
-    }
-    .text_box small{
-        margin-bottom: 10px;
-    }
-
-    .right_container{
-        left: 0;
-    }
-
-    .left_container img, .right_container img{
-        left: 10px;
-    }
-    .left_container_arrow, .right_container_arrow{
-        border-right: 15px solid #c599da;
-        border-left: 0;
-        left: -15px;
-    }
-
+.experience-desc li {
+    margin-bottom: 4px;
+    line-height: 1.4;
 }
