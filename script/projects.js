@@ -7,9 +7,9 @@ window.initProjects = function () {
     const projects = [
         {
             title: "Geospatial Risk Mapping System",
-            image: "",
+            images: [""],
             type: "Data Science / Web App",
-            year: "2024",
+            date: "2024-03",
             desc: "A web-based geospatial analytics system designed to visualize and assess environmental and hazard-related risks across different locations. It integrates geospatial data processing with interactive mapping to display risk indicators through layered visualizations such as choropleth maps. The system supports data-driven insights for understanding spatial patterns, enabling better interpretation of risk distribution for planning and decision-making purposes.",
             tags: ["Python", "React", "GIS"],
             github: "#",
@@ -17,9 +17,13 @@ window.initProjects = function () {
         },
         {   
             title: "4 Pics 1 Word Game",
-            image: "images/4pics1word.png",
+            images: [
+                "images/projectImg/4pics1word.png",
+                "images/projectImg/4pics1word_2.png",
+                "images/projectImg/4pics1word_3.png"
+            ],
             type: "Desktop Application",
-            year: "2023",
+            date: "2023-03",
             desc: "A replication of 4 Pics 1 Word game using Tkinter.",
             tags: ["Python", "Tkinter"],
             github: "https://github.com/NMAndosay/4Pics1Word.git",
@@ -27,9 +31,11 @@ window.initProjects = function () {
         },
         {
             title: "Tsuper Track",
-            image: "images/tsupertrack.png",
+            images: [
+                "images/projectImg/tsupertrack.png"
+            ],
             type: "UI/UX Design",
-            year: "2023",
+            date: "2023-01",
             desc: "A product mockup design for a bus locator system.",
             tags: ["Figma", "UI/UX"],
             github: "https://www.figma.com/file/OHcfxrx5AT6Vxiqcr8wCw7/Mockup---Tsuper-Track",
@@ -37,39 +43,11 @@ window.initProjects = function () {
         },
         {
             title: "Etherea Game",
-            image: "images/etherea.png",
+            images: [
+                "images/projectImg/etherea.png"
+            ],
             type: "Game Development",
-            year: "2023",
-            desc: "An interactive RPG-like running game created using C#.",
-            tags: ["C#", "Game Dev"],
-            github: "https://github.com/mvillamante/Etherea.git",
-            link: "https://github.com/mvillamante/Etherea.git"
-        },
-        {
-            title: "Etherea Game",
-            image: "images/etherea.png",
-            type: "Game Development",
-            year: "2023",
-            desc: "An interactive RPG-like running game created using C#.",
-            tags: ["C#", "Game Dev"],
-            github: "https://github.com/mvillamante/Etherea.git",
-            link: "https://github.com/mvillamante/Etherea.git"
-        },
-        {
-            title: "Etherea Game",
-            image: "images/etherea.png",
-            type: "Game Development",
-            year: "2023",
-            desc: "An interactive RPG-like running game created using C#.",
-            tags: ["C#", "Game Dev"],
-            github: "https://github.com/mvillamante/Etherea.git",
-            link: "https://github.com/mvillamante/Etherea.git"
-        },
-        {
-            title: "Etherea Game",
-            image: "images/etherea.png",
-            type: "Game Development",
-            year: "2023",
+            date: "2023-01",
             desc: "An interactive RPG-like running game created using C#.",
             tags: ["C#", "Game Dev"],
             github: "https://github.com/mvillamante/Etherea.git",
@@ -77,7 +55,17 @@ window.initProjects = function () {
         },
     ];
 
+    let currentImageIndex = 0;
+    let currentImages = [];
+
     function renderFull(p) {
+        currentImages = p.images?.length ? p.images : [];
+        currentImageIndex = 0;
+
+        function getImage() {
+            return currentImages[currentImageIndex] || "";
+        }
+
         fullView.innerHTML = `
             <div class="project-box full">
 
@@ -92,23 +80,34 @@ window.initProjects = function () {
 
             <div class="project-body">
 
-                <!-- LEFT: IMAGE -->
-                <div class="project-image" style="background-image: url('${p.image}'); background-size: cover; background-position: center;"></div>
+                <div class="project-image-wrapper">
 
-                <!-- RIGHT: CONTENT -->
+                    <div class="project-image" id="mainProjectImage"
+                        style="background-image:url('${getImage()}')">
+
+                        <div class="image-nav">
+                            <button id="prevImg">◀</button>
+                            <div class="img-dots" id="imgDots"></div>
+                            <button id="nextImg">▶</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
                 <div class="project-content">
 
                     <div class="project-type-container">
-                        <div class="project-type-text">${p.type || "Project Type"}</div>
-                        <div class="project-type-year">${p.year || ""}</div>
+                        <div>${p.type || "Project Type"}</div>
+                        <div>${formatDate(p.date)}</div>
                     </div>
 
                     <div class="project-desc">
                         ${p.desc}
                     </div>
 
-                    <div class="project-pill-list">
-                        ${p.tags.map(t => `<div class="project-pill">${t}</div>`).join("")}
+                    <div class="pill-list">
+                        ${p.tags.map(t => `<div class="pill">${t}</div>`).join("")}
                     </div>
 
                     <div class="project-links">
@@ -120,7 +119,51 @@ window.initProjects = function () {
             </div>
             </div>
         `;
+
+        const dotsContainer = document.getElementById("imgDots");
+        function renderDots() {
+            if (!dotsContainer) return;
+
+            dotsContainer.innerHTML = "";
+
+            currentImages.forEach((_, index) => {
+                const dot = document.createElement("span");
+                dot.className = "dot-indicator";
+
+                if (index === currentImageIndex) dot.classList.add("active");
+
+                dot.onclick = () => {
+                    currentImageIndex = index;
+                    updateImage();
+                    renderDots();
+                };
+
+                dotsContainer.appendChild(dot);
+            });
         }
+
+        function updateImage() {
+            const el = document.getElementById("mainProjectImage");
+            if (!el || !currentImages.length) return;
+
+            el.style.backgroundImage = `url('${currentImages[currentImageIndex]}')`;
+            renderDots();
+        }
+
+        renderDots();
+
+        document.getElementById("nextImg")?.addEventListener("click", () => {
+            if (!currentImages.length) return;
+            currentImageIndex = (currentImageIndex + 1) % currentImages.length;
+            updateImage();
+        });
+
+        document.getElementById("prevImg")?.addEventListener("click", () => {
+            if (!currentImages.length) return;
+            currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
+            updateImage();
+        });
+            }
 
     function renderList() {
         projectList.innerHTML = "";
@@ -142,18 +185,18 @@ window.initProjects = function () {
             <div class="project-body">
 
                 <div class="project-image"
-                    style="${p.image ? `background-image:url('${p.image}'); background-size:cover; background-position:center;` : ''}">
+                    style="${p.images?.[0] ? `background-image:url('${p.images[0]}'); background-size:cover; background-position:center;` : ''}">
                 </div>
 
                 <div class="project-content">
 
                     <div class="project-type-container">
                         <div>${p.type || "Project Type"}</div>
-                        <div>${p.year || ""}</div>
+                        <div>${formatDate(p.date)}</div>
                     </div>
 
-                    <div class="project-pill-list">
-                        ${p.tags.map(t => `<div class="project-pill">${t}</div>`).join("")}
+                    <div class="pill-list">
+                        ${p.tags.map(t => `<div class="pill">${t}</div>`).join("")}
                     </div>
 
                     <div class="project-btn">View Full Details</div>
@@ -167,6 +210,19 @@ window.initProjects = function () {
         });
     }
 
+    function formatDate(dateStr) {
+        if (!dateStr) return "";
+
+        const [year, month] = dateStr.split("-");
+        const date = new Date(year, month - 1);
+
+        return date.toLocaleString("en-US", {
+            month: "long",
+            year: "numeric"
+        });
+    }
+
+    projects.sort((a, b) => new Date(b.date) - new Date(a.date));
     renderList();
     renderFull(projects[0]);
 };
