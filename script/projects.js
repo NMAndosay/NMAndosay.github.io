@@ -5,53 +5,121 @@ window.initProjects = function () {
     if (!fullView || !projectList) return;
 
     const projects = [
-        {
-            title: "Geospatial Risk Mapping System",
-            images: [""],
-            type: "Data Science / Web App",
-            date: "2024-03",
-            desc: "A web-based geospatial analytics system designed to visualize and assess environmental and hazard-related risks across different locations. It integrates geospatial data processing with interactive mapping to display risk indicators through layered visualizations such as choropleth maps. The system supports data-driven insights for understanding spatial patterns, enabling better interpretation of risk distribution for planning and decision-making purposes.",
-            tags: ["Python", "React", "GIS"],
-            github: "#",
-            link: "#"
-        },
-        {   
+        /*{   
             title: "4 Pics 1 Word Game",
             images: [
                 "images/projectImg/4pics1word.png",
-                "images/projectImg/4pics1word_2.png",
-                "images/projectImg/4pics1word_3.png"
             ],
-            type: "Desktop Application",
+            type: "A Tkinter-based Word Puzzle Game",
             date: "2023-03",
             desc: "A replication of 4 Pics 1 Word game using Tkinter.",
             tags: ["Python", "Tkinter"],
             github: "https://github.com/NMAndosay/4Pics1Word.git",
             link: "https://github.com/NMAndosay/4Pics1Word.git"
+        },*/
+        {
+            title: "ABLE EHR System",
+            images: [""],
+            type: "EHR System for ABLE Center",
+            date: "2025-07",
+            desc: "Project description goes here.",
+            tags: ["Tag1", "Tag2"],
+            github: "#",
+            link: "#"
+        },
+        {
+            title: "Avalia",
+            images: [""],
+            type: "Cinema Booking System",
+            date: "2024-03",
+            desc: "Project description goes here.",
+            tags: ["ASP.NET", "C#", "JavaScript"],
+            github: "#",
+            link: "#"
+        },
+        {
+            title: "CineBio",
+            images: [""],
+            type: "Cinema Face Recognition System",
+            date: "2024-11",
+            desc: "Project description goes here.",
+            tags: ["Python", "JavaScript"],
+            github: "#",
+            link: "#"
+        },
+        {
+            title: "Color Game",
+            images: [""],
+            type: "A Color Guessing Game",
+            date: "2023-12",
+            desc: "Project description goes here.",
+            tags: ["Python"],
+            github: "#",
+            link: "#"
+        },
+        {
+            title: "Etherea",
+            images: [
+                "images/projectImg/etherea.png"
+            ],
+            type: "A Parallax Fighting Game",
+            date: "2023-11",
+            desc: "An interactive RPG-like running game created using C#.",
+            tags: ["C#"],
+            github: "https://github.com/mvillamante/Etherea.git",
+            link: "https://github.com/mvillamante/Etherea.git"
+        },
+        {
+            title: "Gamepedia",
+            images: [""],
+            type: "...",
+            date: "2024-07",
+            desc: "Project description goes here.",
+            tags: ["Tag1", "Tag2"],
+            github: "#",
+            link: "#"
+        },
+        {
+            title: "HazSpot",
+            images: [""],
+            type: "Geospatial Web App",
+            date: "2026-04",
+            desc: "A web-based geospatial analytics system designed to visualize and assess environmental and hazard-related risks across different locations. It integrates geospatial data processing with interactive mapping to display risk indicators through layered visualizations such as choropleth maps. The system supports data-driven insights for understanding spatial patterns, enabling better interpretation of risk distribution for planning and decision-making purposes.",
+            tags: ["Python", "JavaScript", "TypeScript", "Django", "Node.js"],
+            github: "#",
+            link: "#"
+        },
+        {
+            title: "StudyMatch",
+            images: [""],
+            type: "...wrong date...",
+            date: "2024-07",
+            desc: "Project description goes here.",
+            tags: ["HTML", "Python"],
+            github: "#",
+            link: "#"
         },
         {
             title: "Tsuper Track",
             images: [
                 "images/projectImg/tsupertrack.png"
             ],
-            type: "UI/UX Design",
+            type: "Bus Booking Mobile App (Prototype)",
             date: "2023-01",
             desc: "A product mockup design for a bus locator system.",
-            tags: ["Figma", "UI/UX"],
+            tags: ["Figma"],
             github: "https://www.figma.com/file/OHcfxrx5AT6Vxiqcr8wCw7/Mockup---Tsuper-Track",
             link: "https://www.figma.com/file/OHcfxrx5AT6Vxiqcr8wCw7/Mockup---Tsuper-Track"
         },
         {
-            title: "Etherea Game",
-            images: [
-                "images/projectImg/etherea.png"
-            ],
-            type: "Game Development",
-            date: "2023-01",
-            desc: "An interactive RPG-like running game created using C#.",
-            tags: ["C#", "Game Dev"],
-            github: "https://github.com/mvillamante/Etherea.git",
-            link: "https://github.com/mvillamante/Etherea.git"
+            title: "Twitter Clone",
+            images: [""],
+            type: "...wrong date...",
+            date: "2024-03",
+            desc: "Project description goes here.",
+            tags: ["C#", "ASP.NET"],
+            github: "#",
+            link: "#"
         },
     ];
 
