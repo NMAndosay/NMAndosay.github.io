@@ -88,11 +88,10 @@ section {
 /* ================= Specific Styles for Section ================= */
 #projects_section,
 #skills_section,
-#experience_section {
+#experience_section,
+#education_section {
     position: relative;
-    margin: 10% auto;
     height: auto;
-    width: 98%;
     padding: 2%;
     flex-direction: column;
     justify-content: center;
@@ -102,9 +101,17 @@ section {
     transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
+/*with margin*/
+#projects_section,
+#skills_section,
+#experience_section {
+    margin: 10% 5%;
+}
+
 #projects_section.animate,
 #skills_section.animate,
-#experience_section.animate {
+#experience_section.animate,
+#education_section.animate {
     opacity: 1;
     transform: translateY(0);
 }
