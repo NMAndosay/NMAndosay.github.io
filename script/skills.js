@@ -1,22 +1,27 @@
 window.initSkills = function () {
     const skillData = {
         "Frontend": [
-            { name: "HTML", image: "" },
-            { name: "CSS", image: "" },
-            { name: "JavaScript", image: "" },
+            { name: "HTML", image: "images/skillsImg/html-logo.png" },
+            { name: "CSS", image: "images/skillsImg/css-logo.png" },
+            { name: "JavaScript", image: "images/skillsImg/javascript-logo.png" },
+            { name: "TypeScript", image: "images/skillsImg/typescript-logo.png" },
+            { name: "ReactJS", image: "images/skillsImg/react-logo.png" },
         ],
         "Backend": [
-            { name: "Node.js", image: "" },
-            { name: "Python", image: "" },
-        ],
-        "Tools": [
-            { name: "Git", image: "" },
-            { name: "Figma", image: "" },
+            { name: "NodeJS", image: "" },
+            { name: "Python", image: "images/skillsImg/python-logo.png" },
+            { name: "Flask", image: "" },
+            { name: "SQL", image: "" },
         ],
         "Database": [
-            { name: "SQL", image: "" },
+            { name: "MySQL", image: "" },
             { name: "MongoDB", image: "" },
-        ]
+            { name: "PostreSQL", image: "images/skillsImg/postgresql-logo.png" },
+        ],
+        "Design": [
+            { name: "Figma", image: "images/skillsImg/figma-logo.png" },
+            { name: "Canva", image: "" },
+        ],
     };
 
     const categories = Object.keys(skillData);
@@ -62,7 +67,9 @@ window.initSkills = function () {
             item.className = "skills-window-item";
 
             item.innerHTML = `
-                <div class="skill-image"></div>
+                <div class="skill-image">
+                    <img src="${skill.image}" alt="${skill.name}">
+                </div>
                 <div class="skill-name">${skill.name}</div>
             `;
 

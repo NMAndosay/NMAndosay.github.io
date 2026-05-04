@@ -26,6 +26,8 @@
   --home-quote: #666;
 
   /* Projects Section */
+  --project-bg: #f2f2f2d2;
+
   --win-bg: #fdf6ec;
   --win-border: #e2d3c2;
   --win-header: #f3e7d8;
@@ -74,22 +76,24 @@ body.dark-mode {
   --home-quote: rgba(255, 255, 255, 0.5);
 
   /* Projects Section */
+  --project-bg: #111;
+
   --win-bg: #1c1714;
-    --win-border: #3a2f28;
-    --win-header: #2a221d;
+  --win-border: #3a2f28;
+  --win-header: #2a221d;
 
-    --text-dark: #f2e7dc;
-    --text-mid: #d6c3b2;
-    --text-light: #bfa99a;
+  --text-dark: #f2e7dc;
+  --text-mid: #d6c3b2;
+  --text-light: #bfa99a;
 
-    --pill-bg: #3a2f28;
-    --pill-text: #f2c89c;
+  --pill-bg: #3a2f28;
+  --pill-text: #f2c89c;
 
-    --btn-text: #f2c89c;
+  --btn-text: #f2c89c;
 
-    --shadow: 0px 10px 25px rgba(0,0,0,0.5);
+  --shadow: 0px 10px 25px rgba(0,0,0,0.5);
 
-    --dot-red: #ff6b5e;
-    --dot-yellow: #ffc145;
-    --dot-green: #62d26f;
+  --dot-red: #ff6b5e;
+  --dot-yellow: #ffc145;
+  --dot-green: #62d26f;
 }

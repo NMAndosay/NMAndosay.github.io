@@ -8,7 +8,7 @@ window.initProjects = function () {
         /*{   
             title: "4 Pics 1 Word Game",
             images: [
-                "images/projectImg/4pics1word.png",
+                "images/projectImg/4P1W/4pics1word.png",
             ],
             type: "A Tkinter-based Word Puzzle Game",
             date: "2023-03",
@@ -23,7 +23,7 @@ window.initProjects = function () {
             type: "EHR System for ABLE Center",
             date: "2025-07",
             desc: "Project description goes here.",
-            tags: ["Tag1", "Tag2"],
+            tags: ["React", "Vite", "JavaScript", "NodeJS"],
             github: "#",
             link: "#"
         },
@@ -39,7 +39,10 @@ window.initProjects = function () {
         },
         {
             title: "CineBio",
-            images: [""],
+            images: [
+                "images/projectImg/cinebio/cinebio_homepage.png",
+                "images/projectImg/cinebio/cinebio_bookingview.png",
+            ],
             type: "Cinema Face Recognition System",
             date: "2024-11",
             desc: "Project description goes here.",
@@ -60,7 +63,7 @@ window.initProjects = function () {
         {
             title: "Etherea",
             images: [
-                "images/projectImg/etherea.png"
+                "images/projectImg/etherea/etherea.png"
             ],
             type: "A Parallax Fighting Game",
             date: "2023-11",
@@ -75,7 +78,7 @@ window.initProjects = function () {
             type: "...",
             date: "2024-07",
             desc: "Project description goes here.",
-            tags: ["Tag1", "Tag2"],
+            tags: ["C#"],
             github: "#",
             link: "#"
         },
@@ -85,7 +88,7 @@ window.initProjects = function () {
             type: "Geospatial Web App",
             date: "2026-04",
             desc: "A web-based geospatial analytics system designed to visualize and assess environmental and hazard-related risks across different locations. It integrates geospatial data processing with interactive mapping to display risk indicators through layered visualizations such as choropleth maps. The system supports data-driven insights for understanding spatial patterns, enabling better interpretation of risk distribution for planning and decision-making purposes.",
-            tags: ["Python", "JavaScript", "TypeScript", "Django", "Node.js"],
+            tags: ["Python", "JavaScript", "TypeScript", "Django", "NodeJS"],
             github: "#",
             link: "#"
         },
@@ -102,7 +105,7 @@ window.initProjects = function () {
         {
             title: "Tsuper Track",
             images: [
-                "images/projectImg/tsupertrack.png"
+                "images/projectImg/tsupertrack/tsupertrack.png"
             ],
             type: "Bus Booking Mobile App (Prototype)",
             date: "2023-01",
