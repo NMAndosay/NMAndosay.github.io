@@ -53,6 +53,9 @@
   --dot-red: #d96c5f;
   --dot-yellow: #d9a441;
   --dot-green: #6fa86a;
+
+  --meta-type: #222;
+  --meta-date: #555;
 }
 
 body.dark-mode {
@@ -110,4 +113,7 @@ body.dark-mode {
   --dot-red: #ff6b5e;
   --dot-yellow: #ffc145;
   --dot-green: #62d26f;
+
+  --meta-type: #f1f1f1;
+  --meta-date: #b5b5b5;
 }

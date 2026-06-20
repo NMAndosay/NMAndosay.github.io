@@ -55,10 +55,23 @@ body,
 
 /* --------------SECTIONS-------------- */
 
-section {
-    min-height: 100vh;
-    scroll-margin-top: 100px;
-    box-sizing: border-box;
+.section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .section_container{
@@ -112,13 +125,6 @@ section {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity .5s ease-in-out, transform .5s ease-in-out;
-}
-
-/*with margin*/
-#projects_section,
-#skills_section,
-#experience_section {
-    margin: 10% 5%;
 }
 
 #projects_section.animate,

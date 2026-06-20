@@ -5,11 +5,33 @@
     <h4 class="sub_title">What I've Built</h4>
   </div>
 
-  <div class="projects-container">
+  <div class="projects-window">
 
-    <div class="project-full-view" id="fullView"></div>
-    <div class="project-list-view">
-        <div id="projectList"></div>
+    <div class="project-window-header">
+
+      <!-- left: window dots -->
+      <div class="window-controls">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+      </div>
+
+      <!-- center title -->
+      <div class="window-title">My Projects</div>
+
+      <!-- right: close -->
+      <button id="closeProjects" class="close-btn">✕</button>
+
+    </div>
+
+    <div class="projects-body">
+
+      <!-- LEFT: folder list -->
+      <div class="project-folders" id="projectList"></div>
+
+      <!-- RIGHT: full view -->
+      <div class="project-full-view" id="fullView"></div>
+
     </div>
 
   </div>
