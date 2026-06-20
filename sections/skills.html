@@ -6,9 +6,6 @@
 
     <div class="skills-container">
 
-        <!-- LEFT: folders -->
-        <div class="skills-folder-group"></div>
-
         <!-- RIGHT: window -->
         <div class="skills-window">
 
@@ -19,8 +16,8 @@
                         <div class="pill"></div>
                         <div class="pill"></div>
                     </div>
-                    <div class="skills-window-title"></div>
-                    <div></div>
+                    <div class="skills-window-title" id="skillsBreadcrumb"></div>
+                    <button id="closeSkills" class="close-btn">✕</button>
                 </div>
 
                 <div class="skills-window-bottom">
@@ -30,11 +27,14 @@
                     </div>
                     <div class="category-filter"></div>
                 </div>
-
+                
             </div>
 
             <div class="skills-window-body">
-                <div class="skills-window-list"></div>
+                <div class="skills-explorer">
+                    <div class="skills-folder-group"></div>
+                    <div class="skills-window-list"></div>
+                </div>
             </div>
 
         </div>

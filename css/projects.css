@@ -94,7 +94,6 @@
     border-radius: 8px;
     cursor: pointer;
 
-    background: var(--pill-bg);
     color: var(--text-dark);
 
     transition: 0.2s;
@@ -102,6 +101,12 @@
 
 .folder-item:hover {
     transform: translateX(5px);
+}
+
+.folder-item.active {
+    background: var(--pill-bg);
+    transform: translateX(5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 /* folder icon */
@@ -127,9 +132,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 14px 18px;
+    padding: 10px 18px;
     background: transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.project-title {
+    font-size: 21px;
+    font-weight: 700;
+
+    color: var(--meta-type);
+    letter-spacing: 0.5px;
 }
 
 /* BODY */
@@ -153,7 +166,6 @@
     position: absolute;
     inset: 0;
 
-    /* LIGHT MODE DEFAULT */
     background: rgba(0, 0, 0, 0.15);
 
     z-index: 1;

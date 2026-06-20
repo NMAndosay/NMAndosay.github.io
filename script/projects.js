@@ -209,10 +209,22 @@ window.initProjects = function () {
         });
     }
 
+    function setActiveProject(index) {
+        const items = document.querySelectorAll("#projectList .folder-item");
+
+        items.forEach(el => el.classList.remove("active"));
+
+        if (items[index]) {
+            items[index].classList.add("active");
+        }
+
+        renderFull(projects[index]);
+    }
+
     function renderList() {
         projectList.innerHTML = "";
 
-        projects.forEach(p => {
+        projects.forEach((p, index) => {
             const div = document.createElement("div");
             div.className = "folder-item";
 
@@ -223,10 +235,13 @@ window.initProjects = function () {
                 <span>${p.title}</span>
             `;
 
-            div.onclick = () => renderFull(p);
+            div.onclick = () => setActiveProject(index);
 
             projectList.appendChild(div);
         });
+
+        const firstItem = projectList.querySelector(".folder-item");
+        if (firstItem) firstItem.classList.add("active");
     }
 
     function formatDate(dateStr) {
@@ -240,8 +255,6 @@ window.initProjects = function () {
 
     // CLOSE BUTTON
     document.getElementById("closeProjects").onclick = () => {
-        document.getElementById("projects_section").style.display = "none";
-
         const about = document.getElementById("about_section");
         if (about) about.scrollIntoView({ behavior: "smooth" });
     };
@@ -249,5 +262,5 @@ window.initProjects = function () {
     projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     renderList();
-    renderFull(projects[0]);
+    setActiveProject(0);
 };

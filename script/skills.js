@@ -34,6 +34,8 @@ window.initSkills = function () {
     const leftArrow = document.querySelector(".skills-arrow-left");
     const rightArrow = document.querySelector(".skills-arrow-right");
 
+    const breadcrumb = document.getElementById("skillsBreadcrumb");
+
     let currentCategory = null;
     let currentIndex = 0;
 
@@ -76,7 +78,7 @@ window.initSkills = function () {
             skillList.appendChild(item);
         });
 
-        windowTitle.textContent = category;
+        breadcrumb.innerHTML = `Skills <span style="opacity:0.5;">›</span> ${category}`;
     }
 
     // ---------------- ACTIVE CATEGORY ----------------
@@ -144,6 +146,17 @@ window.initSkills = function () {
 
         const firstCategory = categories[0];
         setActiveCategory(firstCategory);
+
+        const closeBtn = document.getElementById("closeSkills");
+
+        if (closeBtn) {
+            closeBtn.onclick = () => {
+                const about = document.getElementById("about_section");
+                if (about) {
+                    about.scrollIntoView({ behavior: "smooth" });
+                }
+            };
+        }
     }
 
     init();

@@ -56,6 +56,9 @@
 
   --meta-type: #222;
   --meta-date: #555;
+
+  /* Skills Section */
+  --border-color: rgba(0, 0, 0, 0.08);
 }
 
 body.dark-mode {
@@ -116,4 +119,7 @@ body.dark-mode {
 
   --meta-type: #f1f1f1;
   --meta-date: #b5b5b5;
+
+  /* Skills Section */
+  --border-color: rgba(255, 255, 255, 0.12);
 }
