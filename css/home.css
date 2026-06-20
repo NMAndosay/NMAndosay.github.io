@@ -172,16 +172,94 @@
     animation-delay: 3s;
 }
 
-.home_image {
+/* Computer Styles */
+
+.computer_container {
+    position: relative;
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
-.home_image img {
-    width: 350px;
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+.computer_img {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+
+    filter: drop-shadow(0 0 30px rgba(255,255,255,.1));
+    transition: all 1s ease;
+}
+
+.computer_screen {
+    position: absolute;
+
+    /* Adjust these values to fit your computer image */
+    top: 13%;
+    left: 24%;
+
+    width: 42%;
+    height: 32%;
+
+    background: var(--computer-screen-bg);
+    color: var(--computer-screen-text);
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Courier New", monospace;
+    font-size: 1rem;
+
+    box-shadow:
+        0 0 20px var(--computer-screen-glow-1),
+        0 0 50px var(--computer-screen-glow-2);
+
+    transition: all 0.8s ease-in-out;
+}
+
+.computer_screen::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent 2px,
+            rgba(255,255,255,.03) 3px,
+            transparent 4px
+        );
+
+    pointer-events: none;
+}
+
+.computer_screen.zoom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    z-index: 1;
+}
+
+
+.terminal_text {
+    margin: 0;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }

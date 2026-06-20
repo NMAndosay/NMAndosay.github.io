@@ -40,6 +40,19 @@ body,
               box-shadow 0.3s ease;
 }
 
+/* --------------Computer Style-------------- */
+
+#about_section,
+#skills_section,
+#projects_section,
+#experience_section,
+#education_section,
+#practicum_section,
+#contacts_section {
+    position: relative;
+    z-index: 10;
+}
+
 /* --------------SECTIONS-------------- */
 
 section {

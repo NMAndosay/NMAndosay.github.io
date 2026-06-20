@@ -1,4 +1,11 @@
 :root {
+  /* Computer Screen */
+  --computer-screen-bg: #f5f5f5;
+  --computer-screen-text: #006b3c;
+
+  --computer-screen-glow-1: rgba(0, 107, 60, 0.2);
+  --computer-screen-glow-2: rgba(0, 107, 60, 0.1);
+
   --body-bg-color: #ffffff;
 
   --text-color: #111;
@@ -49,6 +56,13 @@
 }
 
 body.dark-mode {
+  /* Computer Screen */
+  --computer-screen-bg: #050505;
+  --computer-screen-text: #00ff88;
+
+  --computer-screen-glow-1: rgba(0,255,136,.3);
+  --computer-screen-glow-2: rgba(0,255,136,.15);
+
   --body-bg-color: #211C1C;
 
   --text-color: #ffffff;

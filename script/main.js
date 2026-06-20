@@ -71,6 +71,35 @@ function setupThemeToggle() {
     });
 }
 
+// Transition from home to about
+function setupComputerZoom() {
+    const homeSection = document.getElementById("home_section");
+    const computerScreen = document.getElementById("computerScreen");
+
+    if (!homeSection || !computerScreen) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    // Home is visible
+                    computerScreen.classList.remove("zoom");
+                } else {
+                    // User left Home
+                    computerScreen.classList.add("zoom");
+                }
+
+            });
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+    observer.observe(homeSection);
+}
+
 async function loadAllSections() {
     await loadSection("navbar-placeholder", "./navigation/navbar.html");
     await loadSection("home-placeholder", "./sections/home.html");
@@ -85,6 +114,7 @@ async function loadAllSections() {
     // AFTER loading, setup JS features
     setupMobileMenu();
     setupThemeToggle();
+    setupComputerZoom();
 
     // RENDER SECTIONS
     initProjects();
