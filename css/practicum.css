@@ -1,0 +1,131 @@
+.printer-app {
+    width: 950px;
+    max-width: 100%;
+
+    margin: auto;
+
+    background: var(--win-bg);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--win-border);
+
+    box-shadow: var(--shadow);
+}
+
+.printer-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 22px;
+
+    background: var(--win-header);
+
+    border-bottom: 1px solid var(--win-border);
+}
+
+.printer-title {
+    font-weight: 700;
+}
+
+.printer-status {
+    color: #2ecc71;
+    font-size: 13px;
+}
+
+.printer-content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+}
+
+.queue-panel {
+    border-right: 1px solid var(--win-border);
+    padding: 20px;
+}
+
+.queue-label {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.print-job {
+    padding: 15px;
+
+    background: var(--pill-bg);
+
+    border-radius: 12px;
+}
+
+.job-name {
+    font-weight: 600;
+}
+
+.job-meta {
+    margin-top: 5px;
+    opacity: .7;
+    font-size: 12px;
+}
+
+.progress-bar {
+    margin-top: 15px;
+
+    height: 8px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.08);
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+
+    background: #2ecc71;
+}
+
+.job-status {
+    margin-top: 10px;
+
+    color: #2ecc71;
+    font-size: 12px;
+}
+
+.preview-panel {
+    padding: 20px;
+}
+
+.pdf-preview {
+    width: 100%;
+    height: 600px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: white;
+}
+
+.printer-actions {
+    padding: 20px;
+
+    display: flex;
+    gap: 12px;
+
+    border-top: 1px solid var(--win-border);
+}
+
+.printer-actions a {
+    text-decoration: none;
+
+    padding: 12px 18px;
+
+    background: var(--pill-bg);
+
+    border-radius: 10px;
+
+    color: var(--text-dark);
+}   
