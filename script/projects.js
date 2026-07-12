@@ -123,6 +123,20 @@ window.initProjects = function () {
             link: "#"
         },
     ];
+    
+    const projectCount = document.getElementById("projectCount");
+    if (projectCount) {
+        projectCount.textContent = `${projects.length}+`;
+    }
+
+    const learningYears = document.getElementById("learningYears");
+    if (learningYears) {
+
+        const startYear = 2022;
+        const currentYear = new Date().getFullYear();
+
+        learningYears.textContent = `${currentYear - startYear}+`;
+    }
 
     let currentImages = [];
     let currentIndex = 0;

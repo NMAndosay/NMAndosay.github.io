@@ -6,22 +6,38 @@ window.initSkills = function () {
             { name: "JavaScript", image: "images/skillsImg/javascript-logo.png" },
             { name: "TypeScript", image: "images/skillsImg/typescript-logo.png" },
             { name: "ReactJS", image: "images/skillsImg/react-logo.png" },
+            { name: "Vite", image: "images/skillsImg/vite-logo.png" },
         ],
         "Backend": [
-            { name: "NodeJS", image: "" },
+            { name: "NodeJS", image: "images/skillsImg/nodejs-logo.png" },
             { name: "Python", image: "images/skillsImg/python-logo.png" },
-            { name: "Flask", image: "" },
-            { name: "SQL", image: "" },
+            { name: "Django", image: "images/skillsImg/django-logo.png" },
+            { name: "Flask", image: "images/skillsImg/flask-logo.png" },
+            { name: "C#", image: "images/skillsImg/csharp-logo.png" },
+            { name: "REST API", image: "images/skillsImg/restapi-logo.png" },
         ],
         "Database": [
-            { name: "MySQL", image: "" },
-            { name: "MongoDB", image: "" },
+            { name: "MySQL", image: "images/skillsImg/mysql-logo.png" },
+            { name: "MongoDB", image: "images/skillsImg/mongodb-logo.png" },
             { name: "PostreSQL", image: "images/skillsImg/postgresql-logo.png" },
         ],
-        "Design": [
-            { name: "Figma", image: "images/skillsImg/figma-logo.png" },
-            { name: "Canva", image: "" },
+        "Data & Analytics": [
+            { name: "SQL", image: "images/skillsImg/sql-logo.png" },
+            { name: "Amazon Athena", image: "images/skillsImg/aws-athena-logo.png" },
+            { name: "Pandas", image: "images/skillsImg/pandas-logo.png" },
+            { name: "NumPy", image: "images/skillsImg/numpy-logo.png" },
+            { name: "Power BI", image: "images/skillsImg/power-bi-logo.png" },
+            { name: "Jupyter Notebook", image: "images/skillsImg/jupyter-logo.png" },
         ],
+        "Tools & Others": [
+            { name: "Git", image: "images/skillsImg/git-logo.png" },
+            { name: "GitHub", image: "images/skillsImg/github-logo.png" },
+            { name: "Visual Studio Code", image: "images/skillsImg/vscode-logo.png" },
+            { name: "Visual Studio", image: "images/skillsImg/vs-logo.png" },
+            { name: "Figma", image: "images/skillsImg/figma-logo.png" },
+            { name: "Canva", image: "images/skillsImg/canva-logo.png" },
+            { name: "Postman", image: "images/skillsImg/postman-logo.png" },
+        ]
     };
 
     const categories = Object.keys(skillData);
