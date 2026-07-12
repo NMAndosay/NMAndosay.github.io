@@ -161,6 +161,7 @@ body.dark-mode .about_badge{
 
 .about_item h3{
     color:var(--text-dark);
+    font-weight: 800;
     margin-bottom:10px;
 }
 
