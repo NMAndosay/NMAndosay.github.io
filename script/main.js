@@ -106,7 +106,7 @@ async function loadAllSections() {
     await loadSection("about-placeholder", "./sections/about.html");
     await loadSection("skills-placeholder", "./sections/skills.html");
     await loadSection("projects-placeholder", "./sections/projects.html");
-    await loadSection("experience-placeholder", "./sections/experience.html");
+    // await loadSection("experience-placeholder", "./sections/experience.html");
     await loadSection("education-placeholder", "./sections/education.html");
     await loadSection("contacts-placeholder", "./sections/contacts.html");
     await loadSection("practicum-placeholder", "./sections/practicum.html");
@@ -125,7 +125,7 @@ async function loadAllSections() {
     observeSection("about_section");
     observeSection("skills_section");
     observeSection("projects_section");
-    observeSection("experience_section");
+    // observeSection("experience_section");
     observeSection("education_section");
     observeSection("contacts_section");
     observeSection("practicum_section");
