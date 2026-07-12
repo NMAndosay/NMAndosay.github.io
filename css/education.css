@@ -1,3 +1,173 @@
 #education_section {
-    background-color: var(--project-bg);
+    background-color: var(--project-bg);    
+}
+
+.education-window{
+    width:95%;
+    margin: auto;
+    margin-top: 80px;
+    background:var(--win-bg);
+    border:1px solid var(--win-border);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+}
+
+.education-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 18px;
+    background:var(--win-header);
+    border-bottom:1px solid var(--win-border);
+}
+
+.academic-status{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+}
+
+.status-dot {
+    background: var(--dot-green);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--dot-green) 70%, transparent);
+}
+
+.education-body{
+    display:grid;
+    grid-template-columns:300px 1fr;
+}
+
+.education-sidebar{
+    border-right:1px solid var(--win-border);
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.student-card{
+    color: var(--text-dark);
+    text-align:center;
+}
+
+.student-avatar{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:var(--pill-bg);
+    color: var(--text-dark);
+    border: 1px solid var(--win-border);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:38px;
+}
+
+.student-card h2{
+    margin-top:15px;
+}
+
+.student-card p{
+    opacity:.7;
+}
+
+.student-id{
+    margin-top:12px;
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:20px;
+    background:var(--pill-bg);
+    color: var(--text-dark);
+}
+
+.education-stats{
+    display:grid;
+    gap:12px;
+}
+
+.stat-box{
+    background:var(--pill-bg);
+    border:1px solid var(--win-border);
+    color: var(--text-light);
+    border-radius:12px;
+    padding:16px;
+    text-align:center;
+}
+
+.stat-box h3{
+    color: var(--text-dark);
+    font-size:28px;
+}
+
+.education-timeline{
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.edu-card{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:20px;
+    position:relative;
+}
+
+.edu-card::before{
+    content:"";
+    position:absolute;
+    left:74px;
+    top:35px;
+    bottom:-25px;
+    width:2px;
+    background:var(--win-border);
+}
+
+.edu-card:last-child::before{
+    display:none;
+}
+
+.edu-year{
+    font-weight:700;
+    color:var(--meta-type);
+    position:relative;
+}
+
+.edu-year::after{
+    content:"";
+    position:absolute;
+    right:-12px;
+    top:5px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:var(--accent-color);
+    border:3px solid var(--win-bg);
+}
+
+.edu-content{
+    background:var(--pill-bg);
+    border:1px solid var(--win-border);
+    color: var(--text-dark);
+    border-radius:14px;
+    padding:20px;
+}
+
+.edu-content h3{
+    color: var(--text-light);
+    margin-bottom:6px;
+}
+
+.edu-content h4{
+    opacity:.75;
+    margin-bottom:12px;
+    color: var(--text-light);
+}
+
+.edu-content p{
+    color: var(--text-light);
+    line-height:1.6;
 }

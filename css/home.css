@@ -194,8 +194,9 @@
 .computer_screen {
     position: absolute;
 
+    overflow: none;
     /* Adjust these values to fit your computer image */
-    top: 13%;
+    top: 14%;
     left: 24%;
 
     width: 42%;

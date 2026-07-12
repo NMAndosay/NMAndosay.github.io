@@ -26,7 +26,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     padding-top: 65px;
     background-color: var(--body-bg-color);
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 body,
@@ -69,7 +69,6 @@ body,
 
 .scroll-container {
   height: 100vh;
-  overflow-y: auto;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
@@ -115,7 +114,8 @@ body,
 #projects_section,
 #skills_section,
 #experience_section,
-#education_section {
+#education_section,
+#contacts_section {
     position: relative;
     height: auto;
     padding: 2%;
@@ -130,7 +130,8 @@ body,
 #projects_section.animate,
 #skills_section.animate,
 #experience_section.animate,
-#education_section.animate {
+#education_section.animate,
+#contacts_section.animate {
     opacity: 1;
     transform: translateY(0);
 }
