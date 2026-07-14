@@ -45,19 +45,31 @@
 }
 
 .skills-folder-item.active {
-    background: var(--pill-bg);
-    border-radius: 12px;
+    background: linear-gradient(
+        90deg,
+        rgba(219, 78, 76, 0.12),
+        rgba(55, 9, 71, 0.08)
+    );
+
+    border: 1px solid rgba(219,78,76,.25);
 }
 
-.skills-folder-item.active::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 8px;
-    bottom: 8px;
-    width: 3px;
-    border-radius: 4px;
-    background: var(--accent-color, #ff6b6b);
+.skills-folder-item.active::before{
+    content:"";
+    position:absolute;
+
+    left:0;
+    top:8px;
+    bottom:8px;
+    width:4px;
+
+    border-radius:8px;
+
+    background:linear-gradient(
+        to bottom,
+        #db4e4c,
+        #370947
+    );
 }
 
 .skill-folder-image {
@@ -66,7 +78,11 @@
     flex-shrink: 0;
 
     border-radius: 8px;
-    background: var(--pill-bg);
+    background:linear-gradient(
+        135deg,
+        rgba(219,78,76,.12),
+        rgba(55,9,71,.08)
+    );
 
     display: flex;
     align-items: center;
@@ -120,6 +136,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    background:linear-gradient(
+        to right,
+        rgba(219,78,76,.05),
+        rgba(55,9,71,.03)
+    );
 }
 
 .skills-window-top {
@@ -149,6 +171,7 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    
 }
 
 .skills-window-bottom {
@@ -171,7 +194,8 @@
     justify-content: center;
 
     border-radius: 6px;
-    background: var(--pill-bg);
+    border:1px solid rgba(219,78,76,.12);
+    background:rgba(219,78,76,.08);
     cursor: pointer;
 
     transition: 0.2s;
@@ -180,6 +204,8 @@
 .skills-arrow-left:hover,
 .skills-arrow-right:hover {
     transform: scale(1.1);
+    background:#db4e4c;
+    color: white;
 }
 
 .category-filter {
@@ -225,7 +251,7 @@
 }
 
 .skills-window-item {
-    background: var(--card-bg);
+        
     border: 1px solid var(--win-border);
     border-radius: 12px;
 
@@ -248,4 +274,7 @@
 .skills-window-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-color:#db4e4c;
+    box-shadow:
+        0 12px 30px rgba(219,78,76,.18);
 }

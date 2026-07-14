@@ -112,16 +112,16 @@ window.initProjects = function () {
             github: "https://github.com/NMAndosay/StudyMatch",
             link: "#"
         },
-        {
-            title: "Twitter Clone",
-            images: [""],
-            type: "A Parallax Fighting Game",
-            date: "2023-11",
-            desc: "",
-            tags: ["Xamarin", "C#", ".NET"],
-            github: "",
-            link: "#"
-        },
+        // {
+        //     title: "Twitter Clone",
+        //     images: [""],
+        //     type: "A Parallax Fighting Game",
+        //     date: "2023-11",
+        //     desc: "",
+        //     tags: ["Xamarin", "C#", ".NET"],
+        //     github: "",
+        //     link: "#"
+        // },
     ];
     
     const projectCount = document.getElementById("projectCount");

@@ -24,7 +24,41 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--body-bg-color);
+
+    position: relative;
+    overflow-x: hidden;
+    background: var(--body-bg-color);
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+body::before {
+    top: -180px;
+    left: -180px;
+    background: rgba(219, 78, 76, 0.40);
+}
+
+body::after {
+    bottom: -180px;
+    right: -180px;
+    background: rgba(111, 66, 193, 0.30);
+}
+
+body.dark-mode::before{
+    background: rgba(255,77,109,.12);
+}
+
+body.dark-mode::after{
+    background: rgba(123,44,191,.10);
 }
 
 body,

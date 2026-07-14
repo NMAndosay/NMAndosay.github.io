@@ -22,8 +22,12 @@
     align-items: center;
 
     padding: 10px 15px;
-    background: var(--win-header);
-    border-bottom: 1px solid var(--win-border);
+    background: linear-gradient(
+        to right,
+        rgba(219,78,76,.06),
+        rgba(55,9,71,.04)
+    );
+    border-bottom:1px solid rgba(219,78,76,.12);
 }
 
 /* center title */
@@ -100,19 +104,36 @@
 }
 
 .folder-item:hover {
-    transform: translateX(5px);
+    transform:translateX(5px);
+    background:rgba(219,78,76,.06);
 }
 
 .folder-item.active {
-    background: var(--pill-bg);
-    transform: translateX(5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    background:linear-gradient(
+        90deg,
+        rgba(219,78,76,.12),
+        rgba(55,9,71,.08)
+    );
+
+    border:1px solid rgba(219,78,76,.18);
+
+    transform:translateX(5px);
+
+    box-shadow:0 8px 22px rgba(219,78,76,.12);
 }
 
 /* folder icon */
 .folder-icon {
-    color: #f4c542;
-    font-size: 14px;
+    background:linear-gradient(
+        135deg,
+        #db4e4c,
+        #370947
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    font-size:16px;
 }
 
 /* RIGHT: full view */
@@ -159,6 +180,9 @@
     position: relative;
     overflow: hidden;
     border-radius: 12px;
+    border:1px solid rgba(219,78,76,.12);
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.06);
 }
 
 .project-image-wrapper::after {
