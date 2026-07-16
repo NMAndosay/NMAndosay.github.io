@@ -278,3 +278,312 @@
     box-shadow:
         0 12px 30px rgba(219,78,76,.18);
 }
+
+/* ================= SKILLS ANIMATIONS ================= */
+
+/* Background */
+
+#skills_section{
+    position:relative;
+    overflow:hidden;
+}
+
+#skills_section::before,
+#skills_section::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.12;
+    z-index:0;
+}
+
+#skills_section::before{
+    width:380px;
+    height:380px;
+    background:#db4e4c;
+    top:-120px;
+    left:-120px;
+    animation:skillsBlobLeft 12s ease-in-out infinite alternate;
+}
+
+#skills_section::after{
+    width:340px;
+    height:340px;
+    background:#6d1f8c;
+    bottom:-120px;
+    right:-100px;
+    animation:skillsBlobRight 10s ease-in-out infinite alternate;
+}
+
+.skills-container{
+    position:relative;
+    z-index:1;
+}
+
+
+/* ================= WINDOW ================= */
+
+.skills-window{
+    transition:.4s;
+    animation:windowFade .9s ease;
+}
+
+.skills-window:hover{
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.12),
+        0 0 0 1px rgba(219,78,76,.08);
+}
+
+
+/* ================= HEADER ================= */
+
+.skills-window-header{
+    position:relative;
+    overflow:hidden;
+}
+
+.skills-window-header::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.18),
+        transparent
+    );
+
+    transform:translateX(-120%);
+    animation:headerShine 6s linear infinite;
+}
+
+
+/* ================= SIDEBAR ================= */
+
+.skills-folder-item{
+    transition:
+        transform .25s,
+        background .25s,
+        box-shadow .25s;
+}
+
+.skills-folder-item:hover{
+    transform:translateX(8px);
+    box-shadow:0 10px 25px rgba(219,78,76,.12);
+}
+
+.skills-folder-item.active{
+    box-shadow:
+        0 10px 25px rgba(219,78,76,.18);
+}
+
+
+/* Folder icon */
+
+.skill-folder-image{
+    transition:.3s;
+}
+
+.skills-folder-item:hover .skill-folder-image{
+    transform:rotate(-6deg) scale(1.1);
+}
+
+
+/* ================= SKILL CARDS ================= */
+
+.skills-window-item{
+    position:relative;
+    overflow:hidden;
+
+    opacity:0;
+    transform:translateY(25px);
+
+    animation:cardReveal .6s forwards;
+}
+
+.skills-window-item:nth-child(1){animation-delay:.05s;}
+.skills-window-item:nth-child(2){animation-delay:.10s;}
+.skills-window-item:nth-child(3){animation-delay:.15s;}
+.skills-window-item:nth-child(4){animation-delay:.20s;}
+.skills-window-item:nth-child(5){animation-delay:.25s;}
+.skills-window-item:nth-child(6){animation-delay:.30s;}
+.skills-window-item:nth-child(7){animation-delay:.35s;}
+.skills-window-item:nth-child(8){animation-delay:.40s;}
+.skills-window-item:nth-child(9){animation-delay:.45s;}
+.skills-window-item:nth-child(10){animation-delay:.50s;}
+
+.skills-window-item::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(219,78,76,.06),
+        rgba(109,31,140,.06)
+    );
+
+    opacity:0;
+    transition:.35s;
+}
+
+.skills-window-item:hover::before{
+    opacity:1;
+}
+
+.skills-window-item:hover{
+    transform:translateY(-10px);
+}
+
+
+/* ================= SKILL IMAGE ================= */
+
+.skill-image{
+    transition:.35s;
+}
+
+.skills-window-item:hover .skill-image{
+    transform:
+        scale(1.1)
+        rotate(-5deg);
+
+    box-shadow:
+        0 12px 28px rgba(219,78,76,.18);
+}
+
+.skill-image img{
+    transition:.35s;
+}
+
+.skills-window-item:hover img{
+    transform:scale(1.1);
+}
+
+
+/* ================= NAME ================= */
+
+.skill-name{
+    transition:.3s;
+}
+
+.skills-window-item:hover .skill-name{
+    color:var(--meta-type);
+}
+
+
+/* ================= BUTTONS ================= */
+
+.skills-arrow-left,
+.skills-arrow-right,
+.close-btn{
+    transition:.25s;
+}
+
+.skills-arrow-left:hover,
+.skills-arrow-right:hover{
+    transform:translateY(-2px) scale(1.12);
+}
+
+.close-btn:hover{
+    transform:rotate(90deg);
+    color:#db4e4c;
+}
+
+
+/* ================= PILLS ================= */
+
+.pill{
+    transition:.3s;
+}
+
+.pill:hover{
+    transform:translateY(-2px);
+}
+
+
+/* ================= SCROLLBAR ================= */
+
+.skills-window-list::-webkit-scrollbar{
+    width:8px;
+}
+
+.skills-window-list::-webkit-scrollbar-thumb{
+    border-radius:20px;
+    background:linear-gradient(
+        #db4e4c,
+        #6d1f8c
+    );
+}
+
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes windowFade{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes cardReveal{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes headerShine{
+
+    0%{
+        transform:translateX(-120%);
+    }
+
+    20%{
+        transform:translateX(120%);
+    }
+
+    100%{
+        transform:translateX(120%);
+    }
+
+}
+
+@keyframes skillsBlobLeft{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(80px,-40px) scale(1.2);
+    }
+
+}
+
+@keyframes skillsBlobRight{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(-70px,50px) scale(1.15);
+    }
+
+}

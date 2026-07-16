@@ -133,13 +133,13 @@ h1, h2, h3, #navbar_logo, .navbar_links {
     transform: translateY(-4px);
 }
 
-.navbar_special .navbar_links {
+.navbar_special .theme_btn,
+.navbar_special .theme_btn:hover {
     background: var(--special-bg);
     border: 1px solid var(--special-border);
-}
-
-.navbar_special .navbar_links:hover {
-    background: var(--special-hover);
+    transform: none;
+    box-shadow: none;
+    cursor: pointer; /* still clickable */
 }
 
 /* --------------Toggle Theme Btn-------------- */

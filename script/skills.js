@@ -19,13 +19,13 @@ window.initSkills = function () {
         "Database": [
             { name: "MySQL", image: "images/skillsImg/mysql-logo.png" },
             { name: "MongoDB", image: "images/skillsImg/mongodb-logo.png" },
-            { name: "PostreSQL", image: "images/skillsImg/postgresql-logo.png" },
+            { name: "PostgreSQL", image: "images/skillsImg/postgresql-logo.png" },
         ],
         "Data & Analytics": [
             { name: "SQL", image: "images/skillsImg/sql-logo.png" },
             { name: "Amazon Athena", image: "images/skillsImg/aws-athena-logo.png" },
-            { name: "Pandas", image: "images/skillsImg/pandas-logo.png" },
-            { name: "NumPy", image: "images/skillsImg/numpy-logo.png" },
+            // { name: "Pandas", image: "images/skillsImg/pandas-logo.png" },
+            // { name: "NumPy", image: "images/skillsImg/numpy-logo.png" },
             { name: "Power BI", image: "images/skillsImg/power-bi-logo.png" },
             { name: "Jupyter Notebook", image: "images/skillsImg/jupyter-logo.png" },
         ],
@@ -174,6 +174,24 @@ window.initSkills = function () {
             };
         }
     }
+
+    // ---------------- TAB SWITCHING FOR PRACTICUM----------------
+    const tabs = document.querySelectorAll(".viewer-tab");
+    const contents = document.querySelectorAll(".viewer-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+
+            tabs.forEach(t => t.classList.remove("active"));
+            contents.forEach(c => c.classList.remove("active"));
+
+            tab.classList.add("active");
+
+            document
+                .getElementById(tab.dataset.tab)
+                .classList.add("active");
+        });
+    });
 
     init();
 };

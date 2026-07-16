@@ -211,3 +211,263 @@
 }
 
 }
+
+/* ==========================================
+   EDUCATION ANIMATIONS
+========================================== */
+
+/* Floating background glow */
+
+#education_section{
+    position:relative;
+    overflow:hidden;
+}
+
+#education_section::before,
+#education_section::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.12;
+    z-index:0;
+    pointer-events:none;
+}
+
+#education_section::before{
+    width:360px;
+    height:360px;
+    background:#db4e4c;
+    top:-100px;
+    left:-120px;
+
+    animation:eduBlobOne 12s ease-in-out infinite alternate;
+}
+
+#education_section::after{
+    width:320px;
+    height:320px;
+    background:#6d1f8c;
+    bottom:-100px;
+    right:-100px;
+
+    animation:eduBlobTwo 14s ease-in-out infinite alternate;
+}
+
+.education-container{
+    position:relative;
+    z-index:2;
+}
+
+/* ================= Profile Card ================= */
+
+.education-profile{
+    animation:profileSlide .9s ease;
+    transition:.35s;
+}
+
+.education-profile:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 25px 45px rgba(0,0,0,.15),
+        0 0 30px rgba(219,78,76,.08);
+}
+
+/* Avatar */
+
+.education-avatar{
+    animation:avatarFloat 5s ease-in-out infinite;
+}
+
+.education-avatar:hover{
+    transform:rotate(8deg) scale(1.05);
+}
+
+/* Badges */
+
+.education-badges span{
+    transition:.3s;
+}
+
+.education-badges span:hover{
+    transform:translateY(-4px);
+    background:linear-gradient(
+        135deg,
+        #db4e4c,
+        #6d1f8c
+    );
+
+    color:white;
+}
+
+/* Stats */
+
+.edu-stat{
+    transition:.3s;
+}
+
+.edu-stat:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(219,78,76,.15);
+}
+
+.edu-stat h3{
+    animation:numberGlow 3s ease infinite;
+}
+
+/* ================= Timeline ================= */
+
+.education-timeline{
+    scroll-behavior:smooth;
+}
+
+/* Timeline cards */
+
+.edu-card{
+    animation:cardAppear .8s ease both;
+}
+
+.edu-card:nth-child(2){
+    animation-delay:.2s;
+}
+
+.edu-card:nth-child(3){
+    animation-delay:.4s;
+}
+
+.edu-content{
+    transition:.35s;
+}
+
+.edu-content:hover{
+    transform:translateY(-8px);
+    border-color:rgba(219,78,76,.25);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.12),
+        0 0 20px rgba(219,78,76,.08);
+}
+
+/* Labels */
+
+.edu-date,
+.edu-label{
+    transition:.3s;
+}
+
+.edu-date:hover{
+    transform:scale(1.05);
+}
+
+.edu-label:hover{
+    transform:scale(1.08);
+    box-shadow:0 12px 25px rgba(219,78,76,.25);
+}
+
+/* Headings */
+
+.edu-content h3{
+    transition:.3s;
+}
+
+.edu-content:hover h3{
+    color:var(--meta-type);
+}
+
+/* ================= Scrollbar ================= */
+
+.education-timeline::-webkit-scrollbar{
+    width:6px;
+}
+
+.education-timeline::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.education-timeline::-webkit-scrollbar-thumb{
+    background:rgba(219,78,76,.25);
+    border-radius:999px;
+}
+
+.education-timeline::-webkit-scrollbar-thumb:hover{
+    background:#db4e4c;
+}
+
+/* ================= Animations ================= */
+
+@keyframes profileSlide{
+
+    from{
+        opacity:0;
+        transform:translateX(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes cardAppear{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes avatarFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+@keyframes numberGlow{
+
+    0%,100%{
+        text-shadow:none;
+    }
+
+    50%{
+        text-shadow:
+            0 0 15px rgba(219,78,76,.35);
+    }
+
+}
+
+@keyframes eduBlobOne{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(70px,-40px) scale(1.15);
+    }
+
+}
+
+@keyframes eduBlobTwo{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(-60px,40px) scale(1.12);
+    }
+
+}

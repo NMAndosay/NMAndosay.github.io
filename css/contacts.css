@@ -122,3 +122,160 @@
 }
 
 }
+
+/* ==========================================
+   CONTACTS ANIMATIONS
+========================================== */
+
+/* Background Glow */
+
+#contacts_section{
+    position:relative;
+    overflow:hidden;
+}
+
+#contacts_section::before,
+#contacts_section::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.12;
+    pointer-events:none;
+    z-index:0;
+}
+
+#contacts_section::before{
+    width:360px;
+    height:360px;
+    background:#db4e4c;
+    top:-120px;
+    left:-120px;
+
+    animation:contactBlobOne 12s ease-in-out infinite alternate;
+}
+
+#contacts_section::after{
+    width:320px;
+    height:320px;
+    background:#6d1f8c;
+    bottom:-120px;
+    right:-120px;
+
+    animation:contactBlobTwo 14s ease-in-out infinite alternate;
+}
+
+.contact-container{
+    position:relative;
+    z-index:2;
+}
+
+/* ================= INTRO ================= */
+
+.contact-intro{
+    opacity:0;
+    animation:contactSlideLeft .9s ease forwards;
+}
+
+.contact-avatar{
+    animation:avatarFloat 5s ease-in-out infinite;
+    transition:.35s;
+}
+
+.contact-avatar:hover{
+    transform:rotate(10deg) scale(1.08);
+    box-shadow:
+        0 25px 50px rgba(219,78,76,.28);
+}
+
+.contact-intro h2{
+    transition:.3s;
+}
+
+.contact-intro:hover h2{
+    color:var(--meta-type);
+}
+
+
+
+/* ==========================================
+   Animations
+========================================== */
+
+@keyframes contactSlideLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes contactSlideRight{
+
+    from{
+        opacity:0;
+        transform:translateX(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes cardFade{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes avatarFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+@keyframes contactBlobOne{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(70px,-40px) scale(1.18);
+    }
+
+}
+
+@keyframes contactBlobTwo{
+
+    from{
+        transform:translate(0,0) scale(1);
+    }
+
+    to{
+        transform:translate(-70px,40px) scale(1.15);
+    }
+
+}
