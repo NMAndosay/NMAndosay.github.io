@@ -19,7 +19,7 @@ window.initProjects = function () {
         },
         {
             title: "ABLE EHR System",
-            images: [""],
+            images: ["images/projectImg/able_ehr/able_welcomeportal.jpg"],
             type: "Electronic Health Record System for Pediatric Therapy Monitoring",
             date: "2025-07",
             desc: "A web-based Electronic Health Record (EHR) system developed for the ABLE Center that streamlines pediatric therapy progress monitoring. The system leverages Natural Language Processing (NLP) to analyze therapy notes, organize patient records, and support healthcare professionals with efficient documentation and progress tracking.",
@@ -29,7 +29,7 @@ window.initProjects = function () {
         },
         {
             title: "Avalia",
-            images: [""],
+            images: ["images/projectImg/avalia/avalia_login.png", "images/projectImg/avalia/avalia_title.png"],
             type: "Cinema Booking System",
             date: "2024-03",
             desc: "A web-based cinema ticket booking system that enables users to browse currently showing movies, view available showtimes, select seats, and reserve tickets through an intuitive interface. Designed to streamline the booking process, the system provides a convenient, efficient, and user-friendly movie reservation experience.",
@@ -67,16 +67,16 @@ window.initProjects = function () {
             github: "https://github.com/mvillamante/Geospatial_Web_App",
             link: "https://hazspot.vercel.app"
         },
-        {
-            title: "StudyMatch (Web)",
-            images: [""],
-            type: "Student Grouping and Recommendation System",
-            date: "2025-07",
-            desc: "A prediction-based web application that utilizes clustering techniques to intelligently group students according to their preferences and characteristics. The system helps create compatible study groups, promoting effective collaboration and improving the overall learning experience.",
-            tags: ["HTML", "Python"],
-            github: "https://github.com/NMAndosay/StudyMatch",
-            link: "#"
-        },
+        // {
+        //     title: "StudyMatch (Web)",
+        //     images: [""],
+        //     type: "Student Grouping and Recommendation System",
+        //     date: "2025-07",
+        //     desc: "A prediction-based web application that utilizes clustering techniques to intelligently group students according to their preferences and characteristics. The system helps create compatible study groups, promoting effective collaboration and improving the overall learning experience.",
+        //     tags: ["HTML", "Python"],
+        //     github: "https://github.com/NMAndosay/StudyMatch",
+        //     link: "#"
+        // },
         {
             title: "StudyMatch (Mobile)",
             images: [
@@ -94,7 +94,7 @@ window.initProjects = function () {
         },
         {
             title: "Gamepedia",
-            images: [""],
+            images: ["images/projectImg/gamepedia/gpd_1.png", "images/projectImg/gamepedia/gpd_2.png", "images/projectImg/gamepedia/gpd_3.png"],
             type: "Student Grouping and Recommendation System",
             date: "2024-07",
             desc: "A mobile quiz application developed using Xamarin that challenges users with interactive trivia across various video game genres. The app features an intuitive interface, engaging gameplay, and a diverse set of questions designed to test players' gaming knowledge while providing an enjoyable learning experience.",
@@ -102,16 +102,16 @@ window.initProjects = function () {
             github: "https://github.com/NMAndosay/StudyMatch",
             link: "#"
         },
-        {
-            title: "Etherea",
-            images: [""],
-            type: "A Parallax Fighting Game",
-            date: "2023-11",
-            desc: "A 2D parallax-style action game where players take on the role of a heroine battling various monsters across immersive environments. The game features side-scrolling combat, layered parallax backgrounds, and engaging gameplay designed to deliver an exciting and visually dynamic adventure.",
-            tags: ["Xamarin", "C#", ".NET"],
-            github: "https://github.com/NMAndosay/StudyMatch",
-            link: "#"
-        },
+        // {
+        //     title: "Etherea",
+        //     images: [""],
+        //     type: "A Parallax Fighting Game",
+        //     date: "2023-11",
+        //     desc: "A 2D parallax-style action game where players take on the role of a heroine battling various monsters across immersive environments. The game features side-scrolling combat, layered parallax backgrounds, and engaging gameplay designed to deliver an exciting and visually dynamic adventure.",
+        //     tags: ["Xamarin", "C#", ".NET"],
+        //     github: "https://github.com/NMAndosay/StudyMatch",
+        //     link: "#"
+        // },
         // {
         //     title: "Twitter Clone",
         //     images: [""],
