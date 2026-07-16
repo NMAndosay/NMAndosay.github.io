@@ -5,18 +5,18 @@ window.initProjects = function () {
     if (!fullView || !projectList) return;
 
     const projects = [
-        {   
-            title: "4 Pics 1 Word Game",
-            images: [
-                "images/projectImg/4P1W/4pics1word.png",
-            ],
-            type: "A Tkinter-based Word Puzzle Game",
-            date: "2023-03",
-            desc: "A replication of 4 Pics 1 Word game using Tkinter.",
-            tags: ["Python", "Tkinter"],
-            github: "https://github.com/NMAndosay/4Pics1Word.git",
-            link: "https://github.com/NMAndosay/4Pics1Word.git"
-        },
+        // {   
+        //     title: "4 Pics 1 Word Game",
+        //     images: [
+        //         "images/projectImg/4P1W/4pics1word.png",
+        //     ],
+        //     type: "A Tkinter-based Word Puzzle Game",
+        //     date: "2023-03",
+        //     desc: "A replication of 4 Pics 1 Word game using Tkinter.",
+        //     tags: ["Python", "Tkinter"],
+        //     github: "https://github.com/NMAndosay/4Pics1Word.git",
+        //     link: "https://github.com/NMAndosay/4Pics1Word.git"
+        // },
         {
             title: "ABLE EHR System",
             images: ["images/projectImg/able_ehr/able_welcomeportal.jpg"],
