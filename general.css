@@ -5,6 +5,7 @@
 @import url("./css/about.css");
 @import url("./css/skills.css");
 @import url("./css/projects.css");
+@import url("./css/certificates.css");
 @import url("./css/experience.css");
 @import url("./css/education.css");
 @import url("./css/practicum.css");
@@ -77,6 +78,7 @@ body,
 #about_section,
 #skills_section,
 #projects_section,
+#certificates_section,
 #experience_section,
 #education_section,
 #practicum_section,
@@ -151,6 +153,7 @@ body,
 #projects_section,
 #skills_section,
 #experience_section,
+#certificates_section,
 #education_section,
 #contacts_section {
     position: relative;
@@ -166,6 +169,7 @@ body,
 
 #projects_section.animate,
 #skills_section.animate,
+#certificates_section.animate,
 #experience_section.animate,
 #education_section.animate,
 #contacts_section.animate {
@@ -197,6 +201,7 @@ body,
     #skills_section,
     #projects_section,
     #experience_section,
+    #certificates_section,
     #education_section,
     #practicum_section,
     #contacts_section{
@@ -228,6 +233,7 @@ body,
     #skills_section,
     #projects_section,
     #experience_section,
+    #certificates_section,
     #education_section,
     #practicum_section,
     #contacts_section{

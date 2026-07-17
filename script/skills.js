@@ -1,5 +1,5 @@
 window.initSkills = function () {
-    const skillData = {
+    const skillData = { //DAGDAG KA NG GENERATIVE AI
         "Frontend": [
             { name: "HTML", image: "images/skillsImg/html-logo.png" },
             { name: "CSS", image: "images/skillsImg/css-logo.png" },
