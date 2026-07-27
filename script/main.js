@@ -121,6 +121,7 @@ async function loadAllSections() {
     initProjects();
     initSkills();
     initExperience();
+    initCertificates();
 
     observeSection("home_section");
     observeSection("about_section");
