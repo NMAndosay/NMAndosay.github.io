@@ -29,6 +29,9 @@ window.initSkills = function () {
             { name: "Power BI", image: "images/skillsImg/power-bi-logo.png" },
             { name: "Jupyter Notebook", image: "images/skillsImg/jupyter-logo.png" },
         ],
+        "AI & Machine Learning": [
+            { name: "Generative AI", image: "images/skillsImg/genai-logo.jpg" },
+        ],
         "Tools & Others": [
             { name: "Git", image: "images/skillsImg/git-logo.png" },
             { name: "GitHub", image: "images/skillsImg/github-logo.png" },

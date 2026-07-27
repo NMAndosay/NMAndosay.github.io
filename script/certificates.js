@@ -73,7 +73,7 @@ window.initCertificates = function () {
                 },
                 {
                     title: "Google Analytics Professional Certificate",
-                    file: "files/certificates/google/08_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/d79d42989720f25905bd87827f7d73b0",
                     preview: "files/certificates/data-analytics/CDA-FINAL-1.png"
                 }
             ]
@@ -152,7 +152,7 @@ window.initCertificates = function () {
                 },
                 {
                     title: "IBM Data Science Professional Certificate",
-                    file: "files/certificates/ibm_ds/12_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/47a26a998bbf576572e21053e8cfb395",
                     preview: "files/certificates/data-science/CDS-FINAL-1.png"
                 }
             ]
@@ -221,7 +221,7 @@ window.initCertificates = function () {
                 },
                 {
                     title: "IBM AI Developer Professional Certificate",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/b427fe6fbf8ecacb06f27133a9988e2f",
                     preview: "files/certificates/ai-dev/AD-FINAL-1.png"
                 }
             ]
