@@ -8,67 +8,91 @@ window.initCertificates = function () {
 
     if (!folderList || !fileList) return;
 
+    function formatDate(date) {
+        return new Date(date + "-01").toLocaleDateString("en-US", {
+            month: "long",
+            year: "numeric"
+        });
+    }
 
     // ============================
     // CERTIFICATE DATA
     // ============================
 
     const certificates = [
+        // COMPTIA 2025
+        {
+            id: "comptia",
+            title: "CompTIA Tech+ Certification",
+            issuer: "CompTIA",
+            date: "2025-12",
+            description:
+                "Foundational IT certification covering core concepts in technology, infrastructure, software development, databases, cybersecurity, and emerging technologies.",
+            image: "images/myIcons/comptia-logo.png",
+            pdfs: [
+                {
+                    title: "CompTIA Tech+ Certification", 
+                    file: "https://www.credly.com/badges/d9ff8b94-6ac8-4692-bb69-4379e7e807b8/public_url",
+                    preview: "files/certificates/comptia/comptia-tech-certification.png"
+                }
+            ]
 
-        // Data Analytics Professional Certificate
+        },
+
+        // Data Analytics Professional Certificate 2026
         {
             id: "google",
             title: "Google Data Analytics Professional Certificate",
             issuer: "Google",
-            date: "2026",
+            date: "2026-06",
             description:
                 "Professional certificate focused on the complete data analytics process from data preparation to visualization.",
-            image: "images/certificates/google-da-cover.png",
+            image: "images/myIcons/google-logo.jpg",
 
             pdfs: [
                 {
                     title: "Foundations: Data, Data, Everywhere",
-                    file: "files/certificates/google/01_Foundations.pdf",
+                    file: "https://coursera.org/share/e3f67cddf1b108a1423c5e9fa732dbc8",
                     preview: "files/certificates/data-analytics/CDA-1-1.png"
                 },
                 {
                     title: "Ask Questions to Make Data-Driven Decisions",
-                    file: "files/certificates/google/02_Ask_Questions.pdf",
+                    file: "https://coursera.org/share/4c3f69911e5e34446e4b879e91856e9f",
                     preview: "files/certificates/data-analytics/CDA-2-1.png"
                 },
                 {
                     title: "Prepare Data for Exploration",
-                    file: "files/certificates/google/03_Prepare_Data.pdf",
+                    file: "https://coursera.org/share/4df61e34457bc13e24ef9f49c64ea673",
                     preview: "files/certificates/data-analytics/CDA-3-1.png"
                 },
                 {
                     title: "Process Data from Dirty to Clean",
-                    file: "files/certificates/google/04_Process_Data.pdf",
+                    file: "https://coursera.org/share/b40fc81dd4bb8a8fbf22267e5027d44b",
                     preview: "files/certificates/data-analytics/CDA-4-1.png"
                 },
                 {
                     title: "Analyze Data to Answer Questions",
-                    file: "files/certificates/google/05_Analyze_Data.pdf",
+                    file: "https://coursera.org/share/ddd3be9113e387e9401c75be1504119d",
                     preview: "files/certificates/data-analytics/CDA-5-1.png"
                 },
                 {
                     title: "Share Data Through the Art of Visualization",
-                    file: "files/certificates/google/06_Share_Data.pdf",
+                    file: "https://coursera.org/share/6c729922a36feb5622d7e132545b1d5f",
                     preview: "files/certificates/data-analytics/CDA-6-1.png"
                 },
                 {
                     title: "Introduction to Data Analytics Using Python",
-                    file: "files/certificates/google/07_Capstone.pdf",
+                    file: "https://coursera.org/share/620f46debec944d4edd550ebff7e18a8",
                     preview: "files/certificates/data-analytics/CDA-7-1.png"
                 },
                 {
                     title: "Google Data Analytics Capstone: Complete a Case Study",
-                    file: "files/certificates/google/08_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/7101fa7007e5d9c44c58f0f962805c0a",
                     preview: "files/certificates/data-analytics/CDA-8-1.png"
                 },
                 {
                     title: "Accelerate Your Job Search with AI",
-                    file: "files/certificates/google/08_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/557243f0ea78efb1b222e61de29fd7aa",
                     preview: "files/certificates/data-analytics/CDA-9-1.png"
                 },
                 {
@@ -79,75 +103,75 @@ window.initCertificates = function () {
             ]
         },
 
-        // Data Science Professional Certificate
+        // Data Science Professional Certificate 2026
         {
             id: "ibmds",
             title: "IBM Data Science Professional Certificate",
             issuer: "IBM",
-            date: "2026",
+            date: "2026-07",
             description:
                 "A comprehensive professional certificate covering Python, SQL, data analysis, visualization, machine learning, and data science methodologies.",
-            image: "images/certificates/ibm-ds-cover.png",
+            image: "images/myIcons/ibm-logo.jpg",
 
             pdfs: [
                 {
                     title: "What is Data Science?",
-                    file: "files/certificates/ibm_ds/01_What_is_Data_Science.pdf",
+                    file: "https://coursera.org/share/439804a33e126a396ba6c685783081be",
                     preview: "files/certificates/data-science/CDS-1-1.png"
                 },
                 {
                     title: "Tools for Data Science",
-                    file: "files/certificates/ibm_ds/02_Tools_for_Data_Science.pdf",
+                    file: "https://coursera.org/share/712d36feb4d9573c199fa4ef7c5030be",
                     preview: "files/certificates/data-science/CDS-2-1.png"
                 },
                 {
                     title: "Data Science Methodology",
-                    file: "files/certificates/ibm_ds/03_Data_Science_Methodology.pdf",
+                    file: "https://coursera.org/share/3e759988b4469b9db600765bcf9333e0",
                     preview: "files/certificates/data-science/CDS-3-1.png"
                 },
                 {
                     title: "Python for Data Science, AI & Development",
-                    file: "files/certificates/ibm_ds/04_Python.pdf",
+                    file: "https://coursera.org/share/d7dd50298ce46a3ddf86a2b4336da630",
                     preview: "files/certificates/data-science/CDS-4-1.png"
                 },
                 {
                     title: "Python Project for Data Science",
-                    file: "files/certificates/ibm_ds/05_Python_Project.pdf",
+                    file: "https://coursera.org/share/dc1fd294395591f383f6107f5d49c33a",
                     preview: "files/certificates/data-science/CDS-5-1.png"
                 },
                 {
                     title: "Databases and SQL for Data Science with Python",
-                    file: "files/certificates/ibm_ds/06_SQL.pdf",
+                    file: "https://coursera.org/share/4dbb3319262f500ab5c4be250b3335a1",
                     preview: "files/certificates/data-science/CDS-6-1.png"
                 },
                 {
                     title: "Data Analysis with Python",
-                    file: "files/certificates/ibm_ds/07_Data_Analysis.pdf",
+                    file: "https://coursera.org/share/bc785d8f5c466f437c3d84f6e93715dc",
                     preview: "files/certificates/data-science/CDS-7-1.png"
                 },
                 {
                     title: "Data Visualization with Python",
-                    file: "files/certificates/ibm_ds/08_Data_Visualization.pdf",
+                    file: "https://coursera.org/share/6b1b1366a5503fc5ef2ed6751ca69402",
                     preview: "files/certificates/data-science/CDS-8-1.png"
                 },
                 {
                     title: "Machine Learning with Python",
-                    file: "files/certificates/ibm_ds/09_Machine_Learning.pdf",
+                    file: "https://coursera.org/share/cc932ddef1f1059d8a89bdc463d4ab74",
                     preview: "files/certificates/data-science/CDS-9-1.png"
                 },
                 {
                     title: "Applied Data Science Capstone",
-                    file: "files/certificates/ibm_ds/10_Capstone.pdf",
+                    file: "https://coursera.org/share/a337e3ead0a7e769bccb762da0729616",
                     preview: "files/certificates/data-science/CDS-10-1.png"
                 },
                 {
                     title: "Generative AI: Elevate Your Data Science Career",
-                    file: "files/certificates/ibm_ds/11_Generative_AI.pdf",
+                    file: "https://coursera.org/share/08a8ba232c883647b176f3fbbbb28185",
                     preview: "files/certificates/data-science/CDS-11-1.png"
                 },
                 {
                     title: "Data Science Career Guide and Interview Preparation",
-                    file: "files/certificates/ibm_ds/12_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/55f1cb5bdfff881146b0e82bdc373fed",
                     preview: "files/certificates/data-science/CDS-12-1.png"
                 },
                 {
@@ -158,65 +182,65 @@ window.initCertificates = function () {
             ]
         },
 
-        // AI Developer Professional Certificate
+        // AI Developer Professional Certificate 2026
         {
             id: "ibmai",
             title: "IBM AI Developer Professional Certificate",
             issuer: "IBM",
-            date: "2026",
+            date: "2026-06",
             description:
                 "Professional certificate covering AI development, Python programming, APIs, machine learning, and generative AI.",
-            image: "images/certificates/ibm-ai-cover.png",
+            image: "images/myIcons/ibm-logo.jpg",
 
             pdfs: [
                 {
                     title: "Introduction to Software Engineering",
-                    file: "files/certificates/ibm_ai/01_Intro_AI.pdf",
+                    file: "https://coursera.org/share/79b7ac302172574b5df4f26dd6861c83",
                     preview: "files/certificates/ai-dev/AD-1-1.png"
                 },
                 {
                     title: "Introduction to Artificial Intelligence (AI)",
-                    file: "files/certificates/ibm_ai/02_Python.pdf",
+                    file: "https://coursera.org/share/e0ba47393a61db39278c4f5fbbe523ec",
                     preview: "files/certificates/ai-dev/AD-2-1.png"
                 },
                 {
                     title: "Generative AI: Introduction and Applications",
-                    file: "files/certificates/ibm_ai/03_AI_Apps.pdf",
+                    file: "https://coursera.org/share/d212a1497e06fef1dcf1a6147ae4a5bc",
                     preview: "files/certificates/ai-dev/AD-3-1.png"
                 },
                 {
                     title: "Generative AI: Prompt Engineering Basics",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/5c648431e1efa26e15e4b4b69f90f4d9",
                     preview: "files/certificates/ai-dev/AD-4-1.png"
                 },
                 {
                     title: "Introduction to HTML, CSS, and JavaScript",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/035a3cd04768924f87fe20fae45fdaf7",
                     preview: "files/certificates/ai-dev/AD-5-1.png"
                 },
                 {
                     title: "Python for Data Science, AI, & Development",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/d7dd50298ce46a3ddf86a2b4336da630",
                     preview: "files/certificates/ai-dev/AD-6-1.png"
                 },
                 {
                     title: "Developing AI Applications with Python and Flask",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/9ff31acbc79d89a535ce7f3006bfdba9",
                     preview: "files/certificates/ai-dev/AD-7-1.png"
                 },
                 {
                     title: "Building Generative AI Applications with Python",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/cd019bf6e0d84eb14712ad33de611b71",
                     preview: "files/certificates/ai-dev/AD-8-1.png"
                 },
                 {
                     title: "Generative AI: Elevate your Software Development Career",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/034a07f584aa8f2be96929caa3038ab7",
                     preview: "files/certificates/ai-dev/AD-9-1.png"
                 },
                 {
                     title: "Software Developer Career Guide and Interview Preparation",
-                    file: "files/certificates/ibm_ai/04_Professional_Certificate.pdf",
+                    file: "https://coursera.org/share/c5355b3a55b2db7825f7c55a936537a4",
                     preview: "files/certificates/ai-dev/AD-10-1.png"
                 },
                 {
@@ -247,7 +271,7 @@ window.initCertificates = function () {
             folder.dataset.folder = certificate.id;
 
             folder.innerHTML = `
-                <i class="fa-solid fa-folder"></i>
+                <i class="fa-solid fa-award"></i>
                 <span>${certificate.title.replace(" Professional Certificate", "")}</span>
             `;
 
@@ -268,50 +292,92 @@ window.initCertificates = function () {
 
     function renderFiles(certificate) {
 
-        fileList.innerHTML = "";
+    fileList.innerHTML = "";
 
-        const certificateSet =
-            document.createElement("div");
+    // ============================
+    // CERTIFICATE INFORMATION
+    // ============================
 
-        certificateSet.className =
-            "certificate-set active";
+    const certificateInfo =
+        document.createElement("div");
 
-        certificate.pdfs.forEach(pdf => {
+    certificateInfo.className =
+        "certificate-info";
 
-            const file =
-                document.createElement("a");
+    certificateInfo.innerHTML = `
+        <div class="certificate-info-image">
+            <img
+                src="${certificate.image}"
+                alt="${certificate.title}"
+            >
+        </div>
 
-            file.className =
-                "certificate-file";
+        <div class="certificate-info-content">
 
-            file.href = pdf.file;
+            <h2>${certificate.title}</h2>
 
-            file.target = "_blank";
+            <div class="certificate-meta">
+                <span>${certificate.issuer}</span>
+                <span>•</span>
+                <span>${formatDate(certificate.date)}</span>
+            </div>
 
-            file.innerHTML = `
+            <p>
+                ${certificate.description}
+            </p>
 
-                <div class="certificate-preview">
+        </div>
+    `;
 
-                    <img
-                        src="${pdf.preview}"
-                        alt="${pdf.title}"
-                    >
+    fileList.appendChild(certificateInfo);
 
-                </div>
 
-                <span>
-                    ${pdf.title}
-                </span>
+    // ============================
+    // CERTIFICATE FILES
+    // ============================
 
-            `;
+    const certificateSet =
+        document.createElement("div");
 
-            certificateSet.appendChild(file);
+    certificateSet.className =
+        "certificate-set active";
 
-        });
+    certificate.pdfs.forEach(pdf => {
 
-        fileList.appendChild(certificateSet);
+        const file =
+            document.createElement("a");
 
-    }
+        file.className =
+            "certificate-file";
+
+        file.href = pdf.file;
+        file.target = "_blank";
+        file.rel = "noopener noreferrer";
+
+        file.innerHTML = `
+
+            <div class="certificate-preview">
+
+                <img
+                    src="${pdf.preview}"
+                    alt="${pdf.title}"
+                >
+
+            </div>
+
+            <span>
+                ${pdf.title}
+            </span>
+
+        `;
+
+        certificateSet.appendChild(file);
+
+    });
+
+    fileList.appendChild(certificateSet);
+
+}
 
 
     // ============================
@@ -361,6 +427,10 @@ window.initCertificates = function () {
 
     }
 
+    // Sort certificates by date (newest first)
+    certificates.sort((a, b) => {
+        return new Date(b.date + "-01") - new Date(a.date + "-01");
+    });
 
     // ============================
     // INITIALIZE

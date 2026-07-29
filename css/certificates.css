@@ -1,105 +1,229 @@
-/* ============================
+/* ==========================================
    CERTIFICATES
-============================ */
+========================================== */
 
-.certificates-container {
-    width: 90%;
-    max-width: 1350px;
-    margin: auto;
+#certificates_section{
+    position:relative;
+    overflow:hidden;
 }
 
-.certificate-window {
-    margin: 40px auto;
-    background: var(--win-bg);
-    border: 1px solid var(--win-border);
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+.certificates-container{
+    width:85%;
+    max-width:1250px;
+    margin:80px auto;
 }
 
 
-/* ============================
-   HEADER
-============================ */
+/* ==========================================
+   MAIN LAYOUT
+========================================== */
 
-.certificate-window-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 18px;
-    border-bottom: 1px solid var(--win-border);
-}
-
-.certificate-window-title {
-    color: var(--text-dark);
-    font-weight: 700;
+.certificates-layout{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:45px;
+    align-items:start;
 }
 
 
-/* ============================
-   EXPLORER
-============================ */
+/* ==========================================
+   CATEGORY SIDEBAR
+========================================== */
 
-.certificate-explorer {
-    display: grid;
-    grid-template-columns: 230px 1fr;
-    height: 620px;
+.certificate-categories{
+    position:sticky;
+    top:100px;
+}
+
+.certificate-category-title{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    padding:0 5px 15px;
+    margin-bottom:8px;
+
+    border-bottom:1px solid var(--win-border);
+}
+
+.certificate-category-title span{
+    font-size:13px;
+    font-weight:700;
+    color:var(--text-dark);
+}
+
+.certificate-category-title small{
+    font-size:11px;
+    color:var(--text-light);
 }
 
 
-/* ============================
-   SIDEBAR
-============================ */
+/* ==========================================
+   CATEGORY LIST
+========================================== */
 
-.certificate-folder-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 12px;
-    background: var(--pill-bg);
-    border-right: 1px solid var(--win-border);
+.certificate-folder-group{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
 }
 
-.certificate-folder {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 11px;
-    border-radius: 9px;
-    color: var(--text-dark);
-    cursor: pointer;
-    transition: .2s ease;
+.certificate-folder{
+    position:relative;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    padding:11px 12px;
+
+    border-radius:9px;
+
+    color:var(--text-mid);
+
+    cursor:pointer;
+
+    transition:
+        background .25s,
+        color .25s,
+        transform .25s;
 }
 
-.certificate-folder:hover {
-    background: rgba(219, 78, 76, .08);
+.certificate-folder:hover{
+    color:var(--text-dark);
+
+    background:rgba(219,78,76,.06);
+
+    transform:translateX(4px);
 }
 
-.certificate-folder.active {
-    background: rgba(219, 78, 76, .12);
-    box-shadow: inset 3px 0 #db4e4c;
+.certificate-folder.active{
+    color:var(--text-dark);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(219,78,76,.13),
+            rgba(109,31,140,.05)
+        );
+}
+
+.certificate-folder.active::before{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:7px;
+    bottom:7px;
+
+    width:3px;
+
+    border-radius:10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #db4e4c,
+            #6d1f8c
+        );
 }
 
 .certificate-folder i {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-    color: #f5b301;
-    font-size: 19px;
+    border-radius: 9px;
+    color: #db4e4c;
+    background: rgba(219, 78, 76, .10);
+    font-size: 16px;
+    transition: .3s ease;
+}
+
+.certificate-folder:hover i {
+    transform: rotate(-8deg) scale(1.1);
+}
+
+.certificate-folder.active i {
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #db4e4c,
+        #6d1f8c
+    );
 }
 
 
-/* ============================
-   FILE AREA
-============================ */
+/* ==========================================
+   GALLERY
+========================================== */
 
-.certificate-files {
-    padding: 20px;
-    overflow-y: auto;
+.certificate-gallery{
+    min-width:0;
 }
+
+.certificate-gallery-header{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    margin-bottom:25px;
+}
+
+.certificate-gallery-label{
+    display:block;
+
+    margin-bottom:5px;
+
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+
+    color:#db4e4c;
+}
+
+.certificate-gallery-header h2{
+    margin:0;
+
+    font-size:25px;
+
+    color:var(--text-dark);
+}
+
+
+/* ==========================================
+   CERTIFICATE FILE AREA
+========================================== */
+
+.certificate-files{
+    min-width:0;
+
+    max-height:620px;
+
+    overflow-y:auto;
+
+    padding:3px 8px 15px 3px;
+}
+
+
+/* ==========================================
+   CERTIFICATE GRID
+========================================== */
 
 .certificate-set {
     display: none;
-    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
-    gap: 15px;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(280px, 1fr)
+    );
+
+    gap: 22px;
 }
 
 .certificate-set.active {
@@ -107,50 +231,53 @@
 }
 
 
-/* ============================
+/* ==========================================
    CERTIFICATE CARD
-============================ */
+========================================== */
 
 .certificate-file {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 9px;
 
-    padding: 10px;
+    gap: 14px;
+    padding: 16px;
 
     color: var(--text-dark);
     text-decoration: none;
 
     border: 1px solid var(--win-border);
-    border-radius: 12px;
+    border-radius: 16px;
 
     background: var(--win-bg);
 
-    transition: .2s ease;
+    transition: .3s ease;
 }
 
 .certificate-file:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
+
     border-color: #db4e4c;
-    box-shadow: 0 8px 20px rgba(219, 78, 76, .12);
+
+    box-shadow:
+        0 15px 35px rgba(219, 78, 76, .15);
 }
 
-
 /* ============================
-   PREVIEW
+   BIGGER CERTIFICATE PREVIEW
 ============================ */
 
 .certificate-preview {
     width: 100%;
-    height: 125px;
+    height: 230px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     overflow: hidden;
-    border-radius: 8px;
+
+    border-radius: 11px;
 
     background: var(--pill-bg);
     border: 1px solid var(--win-border);
@@ -159,100 +286,373 @@
 .certificate-preview img {
     width: 100%;
     height: 100%;
+
     object-fit: contain;
+
     display: block;
-    transition: .2s ease;
+
+    transition: .3s ease;
 }
 
 .certificate-file:hover .certificate-preview img {
-    transform: scale(1.025);
+    transform: scale(1.04);
 }
 
-
 /* ============================
-   TITLE
+   CERTIFICATE TITLE
 ============================ */
 
 .certificate-file span {
     width: 100%;
-    min-height: 36px;
+
+    min-height: 45px;
 
     color: var(--text-dark);
-    font-size: 12px;
-    line-height: 1.35;
+
+    font-size: 14px;
+    line-height: 1.45;
+
     text-align: center;
 }
+If you want them r
 
 
-/* ============================
+/* ==========================================
+   TOP ACCENT
+========================================== */
+
+.certificate-file::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:20px;
+    right:20px;
+
+    height:2px;
+
+    border-radius:0 0 10px 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #db4e4c,
+            #6d1f8c
+        );
+
+    opacity:0;
+
+    transition:.3s;
+}
+
+.certificate-file:hover::before{
+    opacity:1;
+}
+
+
+/* ==========================================
    SCROLLBAR
-============================ */
+========================================== */
 
-.certificate-files::-webkit-scrollbar {
-    width: 6px;
+.certificate-files::-webkit-scrollbar{
+    width:5px;
 }
 
-.certificate-files::-webkit-scrollbar-thumb {
-    background: var(--win-border);
-    border-radius: 10px;
+.certificate-files::-webkit-scrollbar-track{
+    background:transparent;
 }
 
+.certificate-files::-webkit-scrollbar-thumb{
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            #db4e4c,
+            #6d1f8c
+        );
+}
+
+
+/* ==========================================
+   BACKGROUND ACCENTS
+========================================== */
+
+#certificates_section::before{
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    top:100px;
+    right:-180px;
+
+    border-radius:50%;
+
+    background:#db4e4c;
+
+    filter:blur(130px);
+
+    opacity:.06;
+
+    pointer-events:none;
+}
+
+#certificates_section::after{
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+    height:280px;
+
+    bottom:0;
+    left:-180px;
+
+    border-radius:50%;
+
+    background:#6d1f8c;
+
+    filter:blur(130px);
+
+    opacity:.05;
+
+    pointer-events:none;
+}
+
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.certificate-set.active .certificate-file{
+    opacity:0;
+    transform:translateY(15px);
+
+    animation:
+        certificateReveal .45s ease forwards;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(1){
+    animation-delay:.03s;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(2){
+    animation-delay:.06s;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(3){
+    animation-delay:.09s;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(4){
+    animation-delay:.12s;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(5){
+    animation-delay:.15s;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(6){
+    animation-delay:.18s;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(7){
+    animation-delay:.21s;
+}
+
+.certificate-set.active
+.certificate-file:nth-child(8){
+    animation-delay:.24s;
+}
+
+@keyframes certificateReveal{
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:900px){
+
+    .certificates-container{
+        width:90%;
+    }
+
+    .certificates-layout{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .certificate-categories{
+        position:static;
+    }
+
+    .certificate-category-title{
+        margin-bottom:10px;
+    }
+
+    .certificate-folder-group{
+        flex-direction:row;
+
+        overflow-x:auto;
+
+        padding-bottom:5px;
+    }
+
+    .certificate-folder{
+        flex-shrink:0;
+
+        white-space:nowrap;
+    }
+
+    .certificate-folder.active::before{
+        top:auto;
+        bottom:0;
+        left:10px;
+        right:10px;
+
+        width:auto;
+        height:3px;
+    }
+
+    .certificate-files{
+        max-height:none;
+        overflow:visible;
+    }
+
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:600px){
+
+    .certificates-container{
+        width:92%;
+        margin:60px auto;
+    }
+
+    .certificate-gallery-header{
+        margin-bottom:18px;
+    }
+
+    .certificate-gallery-header h2{
+        font-size:21px;
+    }
+
+    .certificate-set{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+
+        gap:10px;
+    }
+
+    .certificate-file{
+        padding:8px;
+        border-radius:11px;
+    }
+
+    .certificate-preview{
+        height:105px;
+    }
+
+    .certificate-file span{
+        font-size:11px;
+    }
+
+}
 
 /* ============================
-   MOBILE
+   CERTIFICATE INFORMATION
 ============================ */
 
-@media (max-width: 900px) {
+.certificate-info {
+    display: flex;
+    align-items: center;
 
-    .certificate-explorer {
-        display: block;
-        height: auto;
-    }
+    gap: 20px;
 
-    .certificate-folder-group {
-        flex-direction: row;
-        overflow-x: auto;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
 
-        border-right: none;
-        border-bottom: 1px solid var(--win-border);
-    }
-
-    .certificate-folder {
-        min-width: 190px;
-    }
-
-    .certificate-files {
-        min-height: 500px;
-    }
-
+    border-bottom: 1px solid var(--win-border);
 }
 
-@media (max-width: 600px) {
+.certificate-info-image {
+    width: 80px;
+    height: 80px;
 
-    #certificates_section {
-        padding: 70px 0;
-    }
+    flex-shrink: 0;
 
-    .certificates-container {
-        width: 94%;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .certificate-files {
-        padding: 12px;
-    }
+    padding: 8px;
 
-    .certificate-set {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-    }
+    border-radius: 12px;
 
-    .certificate-preview {
-        height: 105px;
-    }
+    background: var(--pill-bg);
+    border: 1px solid var(--win-border);
+}
 
-    .certificate-folder {
-        min-width: 170px;
-        font-size: 12px;
-    }
+.certificate-info-image img {
+    width: 100%;
+    height: 100%;
 
+    object-fit: contain;
+}
+
+.certificate-info-content {
+    flex: 1;
+}
+
+.certificate-info-content h2 {
+    margin: 0 0 6px;
+
+    color: var(--text-dark);
+
+    font-size: 20px;
+}
+
+.certificate-meta {
+    display: flex;
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: var(--meta-type);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.certificate-info-content p {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+    line-height: 1.6;
 }
