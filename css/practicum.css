@@ -524,3 +524,749 @@
     }
 
 }
+
+/* ==========================================
+   PRACTICUM CONTENT BASE
+========================================== */
+
+.viewer-content{
+    display:none;
+    padding:28px;
+}
+
+.viewer-content.active{
+    display:block;
+}
+
+.content-label{
+    display:block;
+    margin-bottom:5px;
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.5px;
+
+    color:var(--meta-type);
+}
+
+.content-title{
+    margin-bottom:25px;
+}
+
+.content-title h3{
+    margin:0 0 7px;
+    color:var(--text-dark);
+    font-size:25px;
+}
+
+.content-title p{
+    margin:0;
+    color:var(--text-light);
+    font-size:13px;
+    line-height:1.6;
+}
+
+
+/* ==========================================
+   OVERVIEW
+========================================== */
+
+.overview-hero{
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    padding:22px;
+
+    margin-bottom:22px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(219,78,76,.10),
+            rgba(109,31,140,.08)
+        );
+
+    border:1px solid var(--win-border);
+}
+
+.overview-icon{
+    width:58px;
+    height:58px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:15px;
+
+    color:#fff;
+    font-size:24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--home-name-gradient-1),
+            var(--home-name-gradient-2)
+        );
+}
+
+.overview-hero h3{
+    margin:0 0 5px;
+    font-size:24px;
+    color:var(--text-dark);
+}
+
+.overview-hero p{
+    margin:0;
+    color:var(--text-light);
+    font-size:13px;
+    line-height:1.5;
+}
+
+
+/* INFO CARDS */
+
+.overview-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+
+    margin-bottom:25px;
+}
+
+.overview-card{
+    display:flex;
+    align-items:center;
+    gap:13px;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    background:var(--pill-bg);
+    border:1px solid var(--win-border);
+
+    transition:.3s;
+}
+
+.overview-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(219,78,76,.3);
+}
+
+.overview-card-icon{
+    width:40px;
+    height:40px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:11px;
+
+    background:var(--win-bg);
+    color:var(--meta-type);
+}
+
+.overview-card span{
+    display:block;
+    margin-bottom:3px;
+
+    font-size:10px;
+    color:var(--text-mid);
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
+
+.overview-card strong{
+    color:var(--text-dark);
+    font-size:12px;
+}
+
+
+/* SECTIONS */
+
+.overview-section{
+    margin-top:22px;
+    padding:20px;
+
+    border:1px solid var(--win-border);
+    border-radius:16px;
+
+    background:var(--win-bg);
+}
+
+.section-heading{
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    margin-bottom:12px;
+}
+
+.section-heading i{
+    color:var(--meta-type);
+}
+
+.section-heading h3{
+    margin:0;
+    font-size:17px;
+    color:var(--text-dark);
+}
+
+.overview-section p{
+    margin:0 0 12px;
+
+    color:var(--text-light);
+    font-size:13px;
+    line-height:1.8;
+}
+
+.overview-section p:last-child{
+    margin-bottom:0;
+}
+
+
+/* ==========================================
+   TASKS
+========================================== */
+
+.task-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.task-card{
+    position:relative;
+
+    display:grid;
+    grid-template-columns:45px 45px 1fr;
+    align-items:center;
+    gap:15px;
+
+    padding:17px;
+
+    border:1px solid var(--win-border);
+    border-radius:16px;
+
+    background:var(--win-bg);
+
+    transition:.3s;
+}
+
+.task-card:hover{
+    transform:translateX(5px);
+
+    border-color:rgba(219,78,76,.3);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+}
+
+.task-number{
+    font-size:11px;
+    font-weight:800;
+    color:var(--text-mid);
+    text-align:center;
+}
+
+.task-icon{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    color:var(--meta-type);
+    background:var(--pill-bg);
+
+    font-size:18px;
+}
+
+.task-info h4{
+    margin:0 0 5px;
+
+    color:var(--text-dark);
+    font-size:14px;
+}
+
+.task-info p{
+    margin:0 0 9px;
+
+    color:var(--text-light);
+    font-size:12px;
+    line-height:1.6;
+}
+
+.task-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+}
+
+.task-tags span{
+    padding:4px 8px;
+
+    border-radius:999px;
+
+    background:var(--pill-bg);
+    color:var(--text-mid);
+
+    font-size:9px;
+}
+
+
+/* ==========================================
+   SKILLS
+========================================== */
+
+.skills-category{
+    margin-bottom:22px;
+    padding:20px;
+
+    border:1px solid var(--win-border);
+    border-radius:17px;
+
+    background:var(--win-bg);
+}
+
+.skills-category-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin-bottom:17px;
+}
+
+.skills-category-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    color:var(--meta-type);
+    background:var(--pill-bg);
+}
+
+.skills-category-header h4{
+    margin:0 0 3px;
+    color:var(--text-dark);
+    font-size:15px;
+}
+
+.skills-category-header span{
+    font-size:11px;
+    color:var(--text-mid);
+}
+
+.skill-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:9px;
+}
+
+.skill-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    min-height:75px;
+
+    padding:10px;
+
+    text-align:center;
+
+    border:1px solid var(--win-border);
+    border-radius:12px;
+
+    background:var(--pill-bg);
+
+    transition:.3s;
+}
+
+.skill-card i{
+    margin-bottom:8px;
+
+    color:var(--meta-type);
+    font-size:18px;
+}
+
+.skill-card span{
+    color:var(--text-dark);
+    font-size:10px;
+    font-weight:600;
+}
+
+.skill-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(219,78,76,.3);
+}
+
+
+/* CONCLUSION */
+
+.conclusion-card{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+
+    padding:18px;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(219,78,76,.08),
+            rgba(109,31,140,.06)
+        );
+
+    border:1px solid var(--win-border);
+}
+
+.conclusion-icon{
+    width:42px;
+    height:42px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:var(--win-bg);
+    color:var(--meta-type);
+}
+
+.conclusion-card h4{
+    margin:0 0 6px;
+    color:var(--text-dark);
+}
+
+.conclusion-card p{
+    margin:0;
+
+    color:var(--text-light);
+    font-size:12px;
+    line-height:1.7;
+}
+
+
+/* ==========================================
+   CERTIFICATES
+========================================== */
+
+.practicum-certificates{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+}
+
+.practicum-certificate-card{
+    position:relative;
+
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+
+    padding:18px;
+
+    text-decoration:none;
+
+    border:1px solid var(--win-border);
+    border-radius:16px;
+
+    background:var(--win-bg);
+
+    transition:.3s;
+}
+
+.practicum-certificate-card:hover{
+    transform:translateY(-5px);
+
+    border-color:rgba(219,78,76,.3);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.10);
+}
+
+.practicum-certificate-icon{
+    width:45px;
+    height:45px;
+
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(219,78,76,.12),
+            rgba(109,31,140,.12)
+        );
+
+    color:var(--meta-type);
+
+    font-size:20px;
+}
+
+.practicum-certificate-info{
+    flex:1;
+}
+
+.certificate-type{
+    display:block;
+
+    margin-bottom:5px;
+
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1px;
+
+    color:var(--meta-type);
+}
+
+.practicum-certificate-info h4{
+    margin:0 0 7px;
+
+    color:var(--text-dark);
+    font-size:13px;
+    line-height:1.4;
+}
+
+.practicum-certificate-info p{
+    margin:0 0 12px;
+
+    color:var(--text-light);
+    font-size:11px;
+    line-height:1.6;
+}
+
+.certificate-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.certificate-meta span{
+    display:flex;
+    align-items:center;
+    gap:5px;
+
+    color:var(--text-mid);
+    font-size:9px;
+}
+
+.certificate-meta i{
+    color:var(--meta-type);
+}
+
+.certificate-open{
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    color:var(--text-mid);
+    font-size:11px;
+
+    transition:.3s;
+}
+
+.practicum-certificate-card:hover .certificate-open{
+    color:var(--meta-type);
+    transform:translate(2px,-2px);
+}
+
+
+/* ==========================================
+   REPORT
+========================================== */
+
+.report-content{
+    padding:0;
+    height:100%;
+}
+
+.report-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+
+    padding:20px;
+
+    border-bottom:1px solid var(--win-border);
+}
+
+.report-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.report-icon{
+    width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px;
+
+    background:rgba(219,78,76,.10);
+    color:#db4e4c;
+
+    font-size:20px;
+}
+
+.report-title h3{
+    margin:0 0 4px;
+
+    color:var(--text-dark);
+    font-size:16px;
+}
+
+.report-title p{
+    margin:0;
+
+    color:var(--text-light);
+    font-size:11px;
+}
+
+.report-open{
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    padding:9px 13px;
+
+    border-radius:9px;
+
+    color:#fff;
+    background:
+        linear-gradient(
+            135deg,
+            var(--home-name-gradient-1),
+            var(--home-name-gradient-2)
+        );
+
+    text-decoration:none;
+
+    font-size:11px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.report-open:hover{
+    transform:translateY(-2px);
+}
+
+.report-frame{
+    height:calc(100% - 86px);
+
+    padding:15px;
+
+    background:var(--pill-bg);
+}
+
+.report-frame .pdf-preview{
+    width:100%;
+    height:100%;
+
+    min-height:480px;
+
+    border:1px solid var(--win-border);
+    border-radius:10px;
+
+    background:#fff;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:950px){
+
+    .overview-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .skill-cards{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .practicum-certificates{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .viewer-content{
+        padding:18px;
+    }
+
+    .overview-hero{
+        align-items:flex-start;
+    }
+
+    .overview-grid{
+        grid-template-columns:1fr;
+    }
+
+    .task-card{
+        grid-template-columns:35px 40px 1fr;
+        gap:10px;
+        padding:13px;
+    }
+
+    .task-icon{
+        width:40px;
+        height:40px;
+    }
+
+    .skill-cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .report-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .report-open{
+        width:100%;
+        justify-content:center;
+    }
+
+}

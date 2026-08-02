@@ -432,6 +432,9 @@ window.initCertificates = function () {
         return new Date(b.date + "-01") - new Date(a.date + "-01");
     });
 
+    window.certificateData = certificates;
+    
+
     // ============================
     // INITIALIZE
     // ============================
@@ -447,3 +450,133 @@ window.initCertificates = function () {
     }
 
 };
+
+/* ==========================================
+   PRACTICUM CERTIFICATES
+========================================== */
+
+window.initPracticumCertificates = function () {
+
+    const container =
+        document.getElementById("practicumCertificates");
+
+    if (!container) return;
+
+    // Certificates specifically related to the practicum
+    const practicumCertificateIds = [
+        "google",
+        "ibmai",
+        "ibmds"
+    ];
+
+    // Make sure the main certificate data exists
+    if (!window.certificateData) {
+        console.warn("Certificate data has not been initialized yet.");
+        return;
+    }
+
+    // Get only the selected certificates
+    const practicumCertificates =
+        window.certificateData.filter(certificate =>
+            practicumCertificateIds.includes(certificate.id)
+        );
+
+    container.innerHTML = "";
+
+    practicumCertificates.forEach(certificate => {
+
+        const card = document.createElement("a");
+
+        card.className = "practicum-certificate-card";
+
+        const finalCertificate =
+            certificate.pdfs[certificate.pdfs.length - 1];
+
+        card.href = finalCertificate.file;
+        card.target = "_blank";
+        card.rel = "noopener noreferrer";
+
+        // Choose an icon based on the certificate
+        let icon = "fa-award";
+
+        switch (certificate.id) {
+
+            case "google":
+                icon = "fa-chart-line";
+                break;
+
+            case "ibmds":
+                icon = "fa-brain";
+                break;
+
+            case "ibmai":
+                icon = "fa-robot";
+                break;
+
+            default:
+                icon = "fa-award";
+
+        }
+
+        card.innerHTML = `
+
+            <div class="practicum-certificate-icon">
+                <i class="fa-solid ${icon}"></i>
+            </div>
+
+            <div class="practicum-certificate-info">
+
+                <span class="certificate-type">
+                    PROFESSIONAL CERTIFICATE
+                </span>
+
+                <h4>
+                    ${certificate.title}
+                </h4>
+
+                <p>
+                    ${certificate.description}
+                </p>
+
+                <div class="certificate-meta">
+
+                    <span>
+                        <i class="${certificate.id === "google" ? "fa-brands fa-google" : "fa-brands fa-ibm"}"></i>
+                        ${certificate.issuer}
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-calendar"></i>
+                        ${new Date(certificate.date).getFullYear()}
+                    </span>
+
+                </div>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square certificate-open"></i>
+
+        `;
+
+        container.appendChild(card);
+
+    });
+
+};
+
+
+/* ==========================================
+   FORMAT CERTIFICATE DATE
+========================================== */
+
+function formatCertificateDate(date) {
+
+    return new Date(date + "-01").toLocaleDateString(
+        "en-US",
+        {
+            month: "long",
+            year: "numeric"
+        }
+    );
+
+}

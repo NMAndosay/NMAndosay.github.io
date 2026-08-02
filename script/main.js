@@ -122,6 +122,7 @@ async function loadAllSections() {
     initSkills();
     initExperience();
     initCertificates();
+    initPracticumCertificates();
 
     observeSection("home_section");
     observeSection("about_section");
